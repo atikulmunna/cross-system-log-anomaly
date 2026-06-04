@@ -29,3 +29,13 @@ raw logs (N systems)
 
 Surprise is **unsupervised**, and that's exactly why it carries over to a system
 the model has never seen.
+
+## Locked design decisions
+
+| Decision | Choice | Why |
+|---|---|---|
+| Granularity | Per-system cut, unified `(seq, label)` interface | HDFS uses block sessions (keeps comparability with the literature); BGL/TB/OpenStack use fixed-count windows |
+| Window | 100 lines, stride 50 | counting by lines keeps sequence lengths comparable despite very different log rates |
+| Embedder | `all-MiniLM-L6-v2`, frozen, cached | fast on CPU ($0), strong, and easy to swap out for an ablation |
+| Representation | embedding **regression**, not template-id classification | template ids aren't shared across systems, but the vector space is |
+| Metric | PR-AUC primary, ROC-AUC secondary, macro-avg | holds up across systems with very different anomaly base rates |
