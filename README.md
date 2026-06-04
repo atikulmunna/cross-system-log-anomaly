@@ -17,3 +17,12 @@ skip.
 Naive cross-system transfer fails because models latch onto each system's own
 *vocabulary*. The way around it is to never work on raw tokens at all, and
 operate in a **shared semantic space** instead.
+
+```
+raw logs (N systems)
+  -> Drain3 parse ............ templates ("Receiving block <*> src: <*>")
+       -> frozen MiniLM embed . shared 384-d vectors (cross-system!)
+            -> group into sequences . (template-seq, label)
+                 -> small causal transformer over embeddings
+                      -> surprise (predicted vs actual next embedding) = score
+```
