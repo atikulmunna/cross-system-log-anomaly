@@ -1,0 +1,17 @@
+# Datasets
+data/
+loghub/
+
+# Planning docs
+REPORT.md
+ROADMAP.md
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Pipeline outputs
+out/
+
+# Local workspace / agent state
+.claude/
