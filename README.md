@@ -26,3 +26,6 @@ raw logs (N systems)
                  -> small causal transformer over embeddings
                       -> surprise (predicted vs actual next embedding) = score
 ```
+
+Surprise is **unsupervised**, and that's exactly why it carries over to a system
+the model has never seen.
