@@ -23,3 +23,14 @@ def labeled_systems(out_root):
         if (z["labels"] >= 0).any():
             out.append(s)
     return out
+
+
+def load_sequences(out_root, system, min_len=2, max_len=512):
+    """Return (list[int64 array], labels array) filtered to usable lengths."""
+    z = np.load(os.path.join(out_root, system, "sequences.npz"), allow_pickle=True)
+    seqs, labels = [], []
+    for s, lab in zip(z["sequences"], z["labels"]):
+        if len(s) >= min_len:
+            seqs.append(np.asarray(s[:max_len], dtype=np.int64))
+            labels.append(int(lab))
+    return seqs, np.asarray(labels, dtype=np.int64)
