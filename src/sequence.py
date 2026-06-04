@@ -5,7 +5,13 @@ Unified interface, per-system cut (the locked design decision):
   BGL / Thunderbird / OpenStack -> fixed-count sliding window (W, stride);
                   window label = max over its line labels (1 if any anomaly)
 
+Every line's template is mapped to its GLOBAL embedding id (shared space from
+embed.py), so a sequence is just an int array indexing the embedding matrix.
+Label -1 means "unknown" (e.g. no label file available).
+
 Output per system: <out>/<system>/sequences.npz
+  sequences : object array of int32 arrays (global ids, time-ordered)
+  labels    : int array (0 normal, 1 anomaly, -1 unknown)
 
 Usage:
   python src/sequence.py --system BGL --out out --window 100 --stride 50
@@ -27,7 +33,12 @@ def build_system(system, out_root, window=100, stride=50, hdfs_labels=None):
     df = pd.read_parquet(os.path.join(out_root, system, "parsed.parquet"))
     df = df.sort_values("idx").reset_index(drop=True)
     gid_of = _vocab_map(out_root)
-    df["gid"] = df["template"].astype(str).map(gid_of).astype("int32")
+    gid = df["template"].astype(str).map(gid_of)
+    missing = int(gid.isna().sum())
+    if missing:
+        print(f"  WARNING: {missing} lines had unmapped templates -> id 0")
+        gid = gid.fillna(0)
+    df["gid"] = gid.astype("int32")
 
     seqs, labels = [], []
 
