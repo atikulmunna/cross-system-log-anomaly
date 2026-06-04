@@ -1,4 +1,18 @@
-"""Embed unique log templates into a shared semantic space (pipeline step 2)."""
+"""Embed unique log templates into a shared semantic space (pipeline step 2).
+
+Gathers every unique template string across all parsed systems, embeds each
+ONCE with a frozen sentence-transformer (all-MiniLM-L6-v2), L2-normalizes, and
+caches the result. Because identical template strings map to the same global id,
+the space is shared across systems -- this is what makes cross-system transfer
+possible. The embedder is frozen; this runs once on CPU.
+
+Output (in <out>/embeddings/):
+  vocab.parquet : [global_id, template]
+  vectors.npy   : float32 [num_templates, dim], row i == global_id i, L2-normed
+
+Usage:
+  python src/embed.py --out out
+"""
 import argparse
 import glob
 import os
@@ -15,7 +29,9 @@ def build(out_root, model_name="all-MiniLM-L6-v2", batch_size=256):
 
     templates = set()
     for f in files:
-        col = pd.read_csv(f)["template"].astype(str)
+        # keep_default_na=False so empty-string templates stay "" (not NaN);
+        # otherwise they vanish here and fail to map in sequence.py.
+        col = pd.read_csv(f, keep_default_na=False)["template"].astype(str)
         templates.update(col.tolist())
     templates = sorted(templates)
     print(f"collected {len(templates)} unique templates from {len(files)} systems")
