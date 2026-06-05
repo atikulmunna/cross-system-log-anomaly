@@ -1,0 +1,55 @@
+"""Do surprise and rarity catch DIFFERENT anomalies? (complementarity test)
+
+For each labeled target: train the surprise model on all other systems, then
+score the target with (a) sequential surprise, (b) template rarity, (c) their
+z-score ensemble. Reports PR/ROC for each, the rank correlation between the two
+signals, and how many true anomalies surprise catches in its top-P that rarity
+misses (P = number of positives). If the ensemble beats rarity alone, the
+learned model earns its keep.
+
+Usage:
+  C:/Users/Munna/anaconda3/envs/logzs/python.exe src/ensemble.py --out out --epochs 3
+"""
+import argparse
+
+import numpy as np
+import torch
+from scipy.stats import spearmanr
+from sklearn.metrics import average_precision_score, roc_auc_score
+
+from data import all_systems, labeled_systems, load_sequences, load_vectors
+from loso import score, train
+from model import LogTransformer
+from rarity_baseline import rarity_scores
+
+
+def z(x):
+    return (x - x.mean()) / (x.std() + 1e-9)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default="out")
+    ap.add_argument("--epochs", type=int, default=3)
+    ap.add_argument("--batch-size", type=int, default=512)
+    ap.add_argument("--lr", type=float, default=1e-3)
+    ap.add_argument("--d-model", type=int, default=128)
+    ap.add_argument("--nlayers", type=int, default=3)
+    ap.add_argument("--max-len", type=int, default=512)
+    args = ap.parse_args()
+
+    vectors = load_vectors(args.out)
+    every = all_systems(args.out)
+    labeled = labeled_systems(args.out)
+
+    for tgt in labeled:
+        train_systems = [s for s in every if s != tgt]
+        train_seqs = []
+        for s in train_systems:
+            seqs, _ = load_sequences(args.out, s, max_len=args.max_len)
+            train_seqs.extend(seqs)
+        print(f"\n=== target={tgt}  ({len(train_seqs)} train seqs) ===", flush=True)
+
+
+if __name__ == "__main__":
+    main()
