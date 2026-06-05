@@ -46,6 +46,16 @@ def main():
     severity_of_gid = (vectors @ cvecs.T).max(axis=1)  # [V] max cos sim to any concept
 
     print(f"{'target':>12} {'method':>22} {'PR-AUC':>8} {'ROC-AUC':>8}")
+    for tgt in labeled_systems(args.out):
+        seqs, labels = load_sequences(args.out, tgt)
+        keep = labels >= 0
+        labels = labels[keep]
+        seqs = [s for s, k in zip(seqs, keep) if k]
+        severity = np.array([severity_of_gid[s].max() for s in seqs])
+        pr = average_precision_score(labels, severity)
+        roc = roc_auc_score(labels, severity)
+        print(f"{tgt:>12} {'severity':>22} {pr:8.4f} {roc:8.4f}")
+        print()
 
 
 if __name__ == "__main__":
