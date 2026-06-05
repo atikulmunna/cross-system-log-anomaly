@@ -36,3 +36,26 @@ def cosine_next_loss(pred, target, pad):
     sim = F.cosine_similarity(pred[:, :-1], target[:, 1:], dim=-1)  # [B, L-1]
     loss = (1 - sim) * valid
     return loss.sum() / valid.sum().clamp(min=1)
+
+
+def train(model, seqs, epochs, batch_size, lr, max_len):
+    loader = DataLoader(
+        SeqDataset(seqs),
+        batch_size=batch_size,
+        shuffle=True,
+        collate_fn=make_collate(max_len),
+    )
+    opt = torch.optim.AdamW(model.parameters(), lr=lr)
+    model.train()
+    for ep in range(epochs):
+        total, n = 0.0, 0
+        for ids, pad in loader:
+            ids, pad = ids.to(DEVICE), pad.to(DEVICE)
+            pred, target = model(ids, pad)
+            loss = cosine_next_loss(pred, target, pad)
+            opt.zero_grad()
+            loss.backward()
+            opt.step()
+            total += loss.item() * ids.size(0)
+            n += ids.size(0)
+        print(f"    epoch {ep + 1}/{epochs}  loss={total / max(n, 1):.4f}", flush=True)
