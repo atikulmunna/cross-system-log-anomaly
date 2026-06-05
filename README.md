@@ -39,3 +39,12 @@ the model has never seen.
 | Embedder | `all-MiniLM-L6-v2`, frozen, cached | fast on CPU ($0), strong, and easy to swap out for an ablation |
 | Representation | embedding **regression**, not template-id classification | template ids aren't shared across systems, but the vector space is |
 | Metric | PR-AUC primary, ROC-AUC secondary, macro-avg | holds up across systems with very different anomaly base rates |
+
+## Datasets (labeled)
+
+| System | Unit | Labels |
+|---|---|---|
+| HDFS  | block session | `anomaly_label.csv` (2.9% of 575k blocks anomalous) |
+| BGL   | 100-line window | inline (`-` = normal) |
+| Thunderbird | 100-line window | inline; using the first 5M-line slice (the full file is 32 GB) |
+| OpenStack | VM-instance session | 4 abnormal instance UUIDs in `anomaly_labels.txt` |
