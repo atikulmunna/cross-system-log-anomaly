@@ -77,6 +77,21 @@ def main():
             roc = roc_auc_score(labels, v)
             print(f"  [{name:>8}] PR-AUC={pr:.4f}  ROC-AUC={roc:.4f}", flush=True)
 
+        rho = spearmanr(surprise, rarity).correlation
+        P = int(labels.sum())
+        pos = set(np.where(labels == 1)[0])
+        top_sur = set(np.argsort(-surprise)[:P])
+        top_rar = set(np.argsort(-rarity)[:P])
+        tp_sur = len(top_sur & pos)
+        tp_rar = len(top_rar & pos)
+        only_sur = len((top_sur & pos) - top_rar)  # caught by surprise, not rarity
+        print(
+            f"  spearman(surprise,rarity)={rho:.3f}  "
+            f"top-{P}: rarity TP={tp_rar}, surprise TP={tp_sur}, "
+            f"surprise-only TP={only_sur}",
+            flush=True,
+        )
+
 
 if __name__ == "__main__":
     main()
