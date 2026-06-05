@@ -63,3 +63,12 @@ python src/loso.py     --out out                       # train+eval, leave-one-s
 
 Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
 `sequences.npz`) and `out/embeddings/` (`vocab.parquet`, `vectors.npy`).
+
+## Evaluation protocol (the headline)
+
+| Setting | Meaning |
+|---|---|
+| Oracle | trained ON the target system — upper bound |
+| Naive transfer | train on one system, raw-apply to another — should collapse |
+| **LOSO zero-shot** | train on all-but-target, no target labels — the headline number |
+| Few-shot | LOSO + fine-tune on k=10/50 target examples — practical sweet spot |
