@@ -104,3 +104,45 @@ def evaluate(model, out_root, system, args):
         for agg, sc in scores.items()
     }
     return res, int(labels.sum()), len(labels)
+
+
+def run_fold(out_root, target, train_systems, args, vectors, labeled):
+    print(f"\n=== target={target}  train={train_systems} ===")
+    train_seqs = []
+    rng = np.random.default_rng(0)
+    for s in train_systems:
+        seqs, _ = load_sequences(out_root, s, max_len=args.max_len)
+        cap = args.max_train_per_system
+        if cap and len(seqs) > cap:
+            idx = rng.choice(len(seqs), cap, replace=False)
+            seqs = [seqs[i] for i in idx]
+        train_seqs.extend(seqs)
+    print(f"  train sequences: {len(train_seqs)}")
+
+    model = LogTransformer(
+        vectors,
+        d_model=args.d_model,
+        nlayers=args.nlayers,
+        max_len=args.max_len,
+    ).to(DEVICE)
+    train(model, train_seqs, args.epochs, args.batch_size, args.lr, args.max_len)
+
+    # Aggregation is keyed on the target's STRUCTURAL unit type, which is
+    # label-free metadata: window units have constant length (localized anomaly
+    # -> max), session units have variable length (whole-sequence deviation ->
+    # mean). LOSO experiments showed this recovers the oracle-best aggregation in
+    # every fold, whereas selecting on training systems picks the wrong one
+    # (their unit type differs from the target's).
+    tgt_seqs, _ = load_sequences(out_root, target, max_len=args.max_len)
+    lengths = {len(s) for s in tgt_seqs}
+    is_window = len(lengths) == 1
+    chosen = "max" if is_window else "mean"
+    unit = "window" if is_window else "session"
+
+    results, pos, tot = evaluate(model, out_root, target, args)
+    print(f"  positives={pos}/{tot}  (unit={unit} -> aggregation '{chosen}')")
+    for agg, m in results.items():
+        flag = "  <- CHOSEN (a priori)" if agg == chosen else ""
+        flag += "  [oracle-best]" if agg == max(results, key=lambda a: results[a]["pr_auc"]) else ""
+        print(f"  [{agg:>4}] PR-AUC={m['pr_auc']:.4f}  ROC-AUC={m['roc_auc']:.4f}{flag}")
+    return results, chosen
