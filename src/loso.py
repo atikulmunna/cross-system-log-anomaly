@@ -146,3 +146,39 @@ def run_fold(out_root, target, train_systems, args, vectors, labeled):
         flag += "  [oracle-best]" if agg == max(results, key=lambda a: results[a]["pr_auc"]) else ""
         print(f"  [{agg:>4}] PR-AUC={m['pr_auc']:.4f}  ROC-AUC={m['roc_auc']:.4f}{flag}")
     return results, chosen
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default="out")
+    ap.add_argument("--target", default=None, help="single fold; default = all labeled")
+    ap.add_argument("--epochs", type=int, default=3)
+    ap.add_argument("--batch-size", type=int, default=128)
+    ap.add_argument("--lr", type=float, default=1e-3)
+    ap.add_argument("--d-model", type=int, default=128)
+    ap.add_argument("--nlayers", type=int, default=3)
+    ap.add_argument("--max-len", type=int, default=512)
+    ap.add_argument("--max-train-per-system", type=int, default=0,
+                    help="cap sequences per training system (0 = no cap)")
+    args = ap.parse_args()
+
+    vectors = load_vectors(args.out)
+    every = all_systems(args.out)
+    labeled = labeled_systems(args.out)
+    targets = [args.target] if args.target else labeled
+    print(f"all systems: {every}\nlabeled targets: {targets}")
+
+    fold_pr, fold_roc = [], []
+    for tgt in targets:
+        train_systems = [s for s in every if s != tgt]
+        res, chosen = run_fold(args.out, tgt, train_systems, args, vectors, labeled)
+        fold_pr.append(res[chosen]["pr_auc"])
+        fold_roc.append(res[chosen]["roc_auc"])
+
+    if len(fold_pr) > 1:
+        print(f"\n=== MACRO (a-priori-chosen agg per fold) ===")
+        print(f"  PR-AUC={np.mean(fold_pr):.4f}  ROC-AUC={np.mean(fold_roc):.4f}")
+
+
+if __name__ == "__main__":
+    main()
