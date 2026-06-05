@@ -35,9 +35,16 @@ class LogTransformer(nn.Module):
         self.max_len = max_len
 
     def forward(self, ids, pad_mask):
+        """ids: [B, L] global template ids. pad_mask: [B, L] True where padded.
+
+        Returns (pred, target): pred[:, t] is the predicted embedding of the
+        token at position t+1; target is the frozen embedding sequence.
+        """
         target = self.emb(ids)                      # [B, L, d_in] frozen
         L = ids.size(1)
         h = self.inp(target) + self.pos[:, :L]
-        causal = torch.triu(torch.full((L, L), float("-inf"), device=ids.device), 1)
+        # bool mask (True = blocked) matches the bool padding mask, avoiding the
+        # float/bool mismatch warning. Upper triangle = future positions.
+        causal = torch.ones(L, L, dtype=torch.bool, device=ids.device).triu(1)
         h = self.enc(h, mask=causal, src_key_padding_mask=pad_mask)
         return self.out(h), target
