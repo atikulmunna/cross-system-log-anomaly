@@ -88,3 +88,19 @@ def score(model, seqs, batch_size, max_len):
             agg["mean"].append(r.mean())
             agg["top3"].append(np.sort(r)[-3:].mean())
     return {k: np.asarray(v) for k, v in agg.items()}
+
+
+def evaluate(model, out_root, system, args):
+    seqs, labels = load_sequences(out_root, system, max_len=args.max_len)
+    keep = labels >= 0
+    labels = labels[keep]
+    seqs = [s for s, k in zip(seqs, keep) if k]
+    scores = score(model, seqs, args.batch_size, args.max_len)
+    res = {
+        agg: {
+            "pr_auc": float(average_precision_score(labels, sc)),
+            "roc_auc": float(roc_auc_score(labels, sc)),
+        }
+        for agg, sc in scores.items()
+    }
+    return res, int(labels.sum()), len(labels)
