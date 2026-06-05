@@ -52,9 +52,21 @@ def main():
         labels = labels[keep]
         seqs = [s for s, k in zip(seqs, keep) if k]
         severity = np.array([severity_of_gid[s].max() for s in seqs])
-        pr = average_precision_score(labels, severity)
-        roc = roc_auc_score(labels, severity)
-        print(f"{tgt:>12} {'severity':>22} {pr:8.4f} {roc:8.4f}")
+
+        sc_path = os.path.join(args.out, tgt, "scores.npz")
+        rows = [("severity", severity)]
+        if os.path.exists(sc_path):
+            d = np.load(sc_path)
+            surprise, rarity = d["surprise"], d["rarity"]
+            zs, zr, zv = z(surprise), z(rarity), z(severity)
+            rows += [
+                ("rarity", rarity),
+                ("sum(sur+rar+sev)", zs + zr + zv),
+            ]
+        for name, v in rows:
+            pr = average_precision_score(labels, v)
+            roc = roc_auc_score(labels, v)
+            print(f"{tgt:>12} {name:>22} {pr:8.4f} {roc:8.4f}")
         print()
 
 
