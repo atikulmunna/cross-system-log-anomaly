@@ -32,13 +32,16 @@ def main():
     ap.add_argument("--out", default="out")
     args = ap.parse_args()
 
+    print(f"{'system':>12} {'base%':>7} {'PR-AUC':>8} {'ROC-AUC':>8}")
     for sys in labeled_systems(args.out):
         seqs, labels = load_sequences(args.out, sys)
         keep = labels >= 0
         labels = labels[keep]
         seqs = [s for s, k in zip(seqs, keep) if k]
         scores = rarity_scores(seqs)
-        print(f"{sys:>12} base={labels.mean()*100:5.1f}% n={len(seqs)}")
+        pr = average_precision_score(labels, scores)
+        roc = roc_auc_score(labels, scores)
+        print(f"{sys:>12} {labels.mean()*100:6.1f}% {pr:8.4f} {roc:8.4f}")
 
 
 if __name__ == "__main__":
