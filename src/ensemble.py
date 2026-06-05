@@ -71,6 +71,12 @@ def main():
             surprise=surprise, rarity=rarity, ensemble=ens, labels=labels,
         )
 
+        print(f"  unit={'window' if is_window else 'session'}  base={labels.mean()*100:.1f}%")
+        for name, v in [("surprise", surprise), ("rarity", rarity), ("ensemble", ens)]:
+            pr = average_precision_score(labels, v)
+            roc = roc_auc_score(labels, v)
+            print(f"  [{name:>8}] PR-AUC={pr:.4f}  ROC-AUC={roc:.4f}", flush=True)
+
 
 if __name__ == "__main__":
     main()
