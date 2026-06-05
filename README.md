@@ -51,3 +51,15 @@ the model has never seen.
 
 Unlabeled systems (Spark, Hadoop, Zookeeper, HPC, Apache, Linux, OpenSSH, and so
 on) can be dropped into the **pretraining pool** to strengthen generalization.
+
+## Pipeline
+
+```
+python src/parse.py    --system HDFS --input data/HDFS/HDFS.log --out out
+python src/embed.py    --out out                       # build shared vector cache
+python src/sequence.py --system HDFS --out out --hdfs-labels data/HDFS/anomaly_label.csv
+python src/loso.py     --out out                       # train+eval, leave-one-system-out
+```
+
+Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
+`sequences.npz`) and `out/embeddings/` (`vocab.parquet`, `vectors.npy`).
