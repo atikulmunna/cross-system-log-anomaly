@@ -55,6 +55,22 @@ def main():
         ).to("cuda" if torch.cuda.is_available() else "cpu")
         train(model, train_seqs, args.epochs, args.batch_size, args.lr, args.max_len)
 
+        seqs, labels = load_sequences(args.out, tgt, max_len=args.max_len)
+        keep = labels >= 0
+        labels = labels[keep]
+        seqs = [s for s, k in zip(seqs, keep) if k]
+
+        sc = score(model, seqs, args.batch_size, args.max_len)
+        is_window = len({len(s) for s in seqs}) == 1
+        surprise = sc["max"] if is_window else sc["mean"]
+        rarity = rarity_scores(seqs)
+        ens = z(surprise) + z(rarity)
+
+        np.savez(
+            f"{args.out}/{tgt}/scores.npz",
+            surprise=surprise, rarity=rarity, ensemble=ens, labels=labels,
+        )
+
 
 if __name__ == "__main__":
     main()
