@@ -59,3 +59,32 @@ def train(model, seqs, epochs, batch_size, lr, max_len):
             total += loss.item() * ids.size(0)
             n += ids.size(0)
         print(f"    epoch {ep + 1}/{epochs}  loss={total / max(n, 1):.4f}", flush=True)
+
+
+@torch.no_grad()
+def score(model, seqs, batch_size, max_len):
+    """Return per-sequence surprise under three aggregations."""
+    model.eval()
+    loader = DataLoader(
+        SeqDataset(seqs),
+        batch_size=batch_size,
+        shuffle=False,
+        collate_fn=make_collate(max_len),
+    )
+    agg = {"max": [], "mean": [], "top3": []}
+    for ids, pad in loader:
+        ids, pad = ids.to(DEVICE), pad.to(DEVICE)
+        pred, target = model(ids, pad)
+        sim = F.cosine_similarity(pred[:, :-1], target[:, 1:], dim=-1)  # [B, L-1]
+        surprise = 1 - sim
+        valid = ~pad[:, 1:]
+        surprise = surprise.masked_fill(~valid, float("nan"))
+        s = surprise.cpu().numpy()
+        for row in s:
+            r = row[~np.isnan(row)]
+            if len(r) == 0:
+                r = np.array([0.0])
+            agg["max"].append(r.max())
+            agg["mean"].append(r.mean())
+            agg["top3"].append(np.sort(r)[-3:].mean())
+    return {k: np.asarray(v) for k, v in agg.items()}
