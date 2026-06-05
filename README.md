@@ -48,3 +48,6 @@ the model has never seen.
 | BGL   | 100-line window | inline (`-` = normal) |
 | Thunderbird | 100-line window | inline; using the first 5M-line slice (the full file is 32 GB) |
 | OpenStack | VM-instance session | 4 abnormal instance UUIDs in `anomaly_labels.txt` |
+
+Unlabeled systems (Spark, Hadoop, Zookeeper, HPC, Apache, Linux, OpenSSH, and so
+on) can be dropped into the **pretraining pool** to strengthen generalization.
