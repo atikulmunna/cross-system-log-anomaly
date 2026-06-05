@@ -3,6 +3,8 @@ import glob
 import os
 
 import numpy as np
+import torch
+from torch.utils.data import Dataset
 
 
 def load_vectors(out_root):
@@ -34,3 +36,29 @@ def load_sequences(out_root, system, min_len=2, max_len=512):
             seqs.append(np.asarray(s[:max_len], dtype=np.int64))
             labels.append(int(lab))
     return seqs, np.asarray(labels, dtype=np.int64)
+
+
+class SeqDataset(Dataset):
+    def __init__(self, seqs):
+        self.seqs = seqs
+
+    def __len__(self):
+        return len(self.seqs)
+
+    def __getitem__(self, i):
+        return self.seqs[i]
+
+
+def make_collate(max_len=512):
+    def collate(batch):
+        L = min(max(len(s) for s in batch), max_len)
+        B = len(batch)
+        ids = np.zeros((B, L), dtype=np.int64)
+        pad = np.ones((B, L), dtype=bool)
+        for i, s in enumerate(batch):
+            s = s[:L]
+            ids[i, : len(s)] = s
+            pad[i, : len(s)] = False
+        return torch.from_numpy(ids), torch.from_numpy(pad)
+
+    return collate
