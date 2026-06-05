@@ -50,6 +50,11 @@ def main():
             train_seqs.extend(seqs)
         print(f"\n=== target={tgt}  ({len(train_seqs)} train seqs) ===", flush=True)
 
+        model = LogTransformer(
+            vectors, d_model=args.d_model, nlayers=args.nlayers, max_len=args.max_len
+        ).to("cuda" if torch.cuda.is_available() else "cpu")
+        train(model, train_seqs, args.epochs, args.batch_size, args.lr, args.max_len)
+
 
 if __name__ == "__main__":
     main()
