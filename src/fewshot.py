@@ -64,6 +64,25 @@ def main():
         macro["zeroshot_sum"].append(zs_sum)
         macro["oracle1"].append(oracle1)
 
+        pos = np.where(y == 1)[0]
+        neg = np.where(y == 0)[0]
+        row = {}
+        for k in KS:
+            rocs = []
+            for seed in range(SEEDS):
+                rng = np.random.default_rng(seed)
+                sp = rng.choice(pos, k, replace=False)
+                sn = rng.choice(neg, k, replace=False)
+                sup = np.concatenate([sp, sn])
+                mask = np.ones(len(y), bool)
+                mask[sup] = False
+                clf = LogisticRegression(max_iter=1000).fit(X[sup], y[sup])
+                proba = clf.predict_proba(X[mask])[:, 1]
+                rocs.append(roc_auc_score(y[mask], proba))
+            row[k] = float(np.mean(rocs))
+            macro[f"k={k}"].append(row[k])
+        print(f"{tgt:>12} {zs_sum:8.3f} " + " ".join(f"{row[k]:8.3f}" for k in KS) + f" {oracle1:8.3f}")
+
 
 if __name__ == "__main__":
     main()
