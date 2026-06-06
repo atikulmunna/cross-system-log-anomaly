@@ -25,3 +25,28 @@ SEEDS = 20
 
 def z(x):
     return (x - x.mean()) / (x.std() + 1e-9)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default="out")
+    args = ap.parse_args()
+
+    vectors = np.load(f"{args.out}/embeddings/vectors.npy")
+    cvecs = (
+        SentenceTransformer("all-MiniLM-L6-v2")
+        .encode(CONCEPTS, normalize_embeddings=True)
+        .astype("float32")
+    )
+    sev_gid = (vectors @ cvecs.T).max(axis=1)
+
+    macro = {f"k={k}": [] for k in KS}
+    macro["zeroshot_sum"] = []
+    macro["oracle1"] = []
+
+    hdr = f"{'target':>12} {'zs_sum':>8} " + " ".join(f"{'k='+str(k):>8}" for k in KS) + f" {'oracle1':>8}"
+    print(hdr)
+
+
+if __name__ == "__main__":
+    main()
