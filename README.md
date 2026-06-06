@@ -5,7 +5,7 @@ training**. The interesting part isn't scale, it's the generalization trick and
 an honest **leave-one-system-out (LOSO)** evaluation that most papers quietly
 skip.
 
-> **Full write-up: [REPORT.md](REPORT.md).** The short version: zero-shot
+> **📄 Full write-up: [REPORT.md](REPORT.md).** The short version: zero-shot
 > transfer collapses and trivial baselines beat the learned model. Anomalies
 > fall into a taxonomy (contextual, point, marked), and each type is caught by a
 > different label-free signal (surprise, rarity, severity). Picking the right
@@ -68,10 +68,10 @@ Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
 
 | Setting | Meaning |
 |---|---|
-| Oracle | trained ON the target system — upper bound |
-| Naive transfer | train on one system, raw-apply to another — should collapse |
-| **LOSO zero-shot** | train on all-but-target, no target labels — the headline number |
-| Few-shot | LOSO + fine-tune on k=10/50 target examples — practical sweet spot |
+| Oracle | trained on the target system, so this is the upper bound |
+| Naive transfer | train on one system, apply raw to another, and watch it collapse |
+| **LOSO zero-shot** | train on all-but-target with no target labels; this is the headline number |
+| Few-shot | LOSO plus fine-tuning on k=10/50 target examples, the practical sweet spot |
 
 ## Budget
 
