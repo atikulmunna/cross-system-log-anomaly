@@ -64,12 +64,27 @@ def main():
 
         hard_k = max(meta, key=meta.get)
         oracle_k = max(rocs, key=rocs.get)
+        m = np.array([meta[k] for k in names])
+        w = np.exp(m / (m.std() + 1e-9))
+        w /= w.sum()
+        soft = sum(w[i] * sig[names[i]] for i in range(3))
+        summ = sum(sig.values())
+
+        def met(v):
+            return roc_auc_score(labels, v), average_precision_score(labels, v)
 
         print(f"\n== {tgt} (base {labels.mean()*100:.1f}%) ==")
         for k in names:
             print(f"  {k:>9}: ROC={rocs[k]:.3f}  tail_sep={meta[k]:6.2f}")
         flag = "OK" if hard_k == oracle_k else "MISS"
         print(f"  meta picks '{hard_k}' | oracle '{oracle_k}'  [{flag}]")
+        print("  soft weights: " + ", ".join(f"{names[i]}={w[i]:.2f}" for i in range(3)))
+        for label, v in [("sum", summ), ("hard", sig[hard_k]), ("soft", soft),
+                         ("oracle1", sig[oracle_k])]:
+            roc, pr = met(v)
+            macro[label].append(roc)
+            macro_pr[label].append(pr)
+            print(f"    {label:>7}: ROC={roc:.3f}  PR={pr:.3f}")
 
 
 if __name__ == "__main__":
