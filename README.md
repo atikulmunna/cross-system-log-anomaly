@@ -72,3 +72,9 @@ Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
 | Naive transfer | train on one system, raw-apply to another — should collapse |
 | **LOSO zero-shot** | train on all-but-target, no target labels — the headline number |
 | Few-shot | LOSO + fine-tune on k=10/50 target examples — practical sweet spot |
+
+## Budget
+
+~$10 RunPod, though you don't really need it. The expensive embedder is frozen
+and cached on CPU — the trained transformer is tiny (operates over 384-d vectors,
+~1M params) — so a full LOSO sweep is only a few GPU-hours.
