@@ -62,6 +62,8 @@ def main():
             rows += [
                 ("rarity", rarity),
                 ("sum(sur+rar+sev)", zs + zr + zv),
+                ("MAX(sur,rar,sev)", np.maximum.reduce([zs, zr, zv])),
+                ("MAX(rar,sev)", np.maximum(zr, zv)),
             ]
         for name, v in rows:
             pr = average_precision_score(labels, v)
