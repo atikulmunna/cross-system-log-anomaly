@@ -59,6 +59,11 @@ def main():
         ])
         y = labels
 
+        zs_sum = roc_auc_score(y, X.sum(axis=1))
+        oracle1 = max(roc_auc_score(y, X[:, j]) for j in range(3))
+        macro["zeroshot_sum"].append(zs_sum)
+        macro["oracle1"].append(oracle1)
+
 
 if __name__ == "__main__":
     main()
