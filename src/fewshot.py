@@ -83,6 +83,12 @@ def main():
             macro[f"k={k}"].append(row[k])
         print(f"{tgt:>12} {zs_sum:8.3f} " + " ".join(f"{row[k]:8.3f}" for k in KS) + f" {oracle1:8.3f}")
 
+    print("\n=== MACRO ROC ===")
+    print(f"  zero-shot sum : {np.mean(macro['zeroshot_sum']):.3f}")
+    for k in KS:
+        print(f"  few-shot k={k:<3}: {np.mean(macro[f'k={k}']):.3f}")
+    print(f"  oracle1 (UB)  : {np.mean(macro['oracle1']):.3f}")
+
 
 if __name__ == "__main__":
     main()
