@@ -46,6 +46,18 @@ def main():
 
     hdr = f"{'target':>12} {'zs_sum':>8} " + " ".join(f"{'k='+str(k):>8}" for k in KS) + f" {'oracle1':>8}"
     print(hdr)
+    for tgt in labeled_systems(args.out):
+        seqs, labels = load_sequences(args.out, tgt)
+        keep = labels >= 0
+        labels = labels[keep]
+        seqs = [s for s, k in zip(seqs, keep) if k]
+        d = np.load(f"{args.out}/{tgt}/scores.npz")
+        X = np.column_stack([
+            z(d["surprise"]),
+            z(d["rarity"]),
+            z(np.array([sev_gid[s].max() for s in seqs])),
+        ])
+        y = labels
 
 
 if __name__ == "__main__":
