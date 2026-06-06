@@ -86,6 +86,10 @@ def main():
             macro_pr[label].append(pr)
             print(f"    {label:>7}: ROC={roc:.3f}  PR={pr:.3f}")
 
+    print("\n=== MACRO (ROC / PR) ===")
+    for k in ["sum", "hard", "soft", "oracle1"]:
+        print(f"  {k:>7}: ROC={np.mean(macro[k]):.3f}  PR={np.mean(macro_pr[k]):.3f}")
+
 
 if __name__ == "__main__":
     main()
