@@ -13,6 +13,7 @@ import argparse
 
 import numpy as np
 from sklearn.metrics import average_precision_score, roc_auc_score
+from sklearn.mixture import GaussianMixture
 from sentence_transformers import SentenceTransformer
 
 from data import labeled_systems, load_sequences
@@ -23,11 +24,17 @@ def z(x):
     return (x - x.mean()) / (x.std() + 1e-9)
 
 
-def tail_sep(x):
-    """Heavy-tail separation: (p99 - p50) / IQR. High when a signal has a small
-    set of extreme outliers (candidate anomalies) above its bulk."""
-    p99, p50, p25, p75 = np.percentile(x, [99, 50, 25, 75])
-    return (p99 - p50) / (p75 - p25 + 1e-9)
+def gmm_sep(x):
+    """Separation of a 2-component GMM: |mu1-mu0| / pooled-std. Base-rate robust
+    measure of whether the signal splits into two distinct modes (anomaly vs
+    normal). Noise/unimodal -> low; clean bimodal -> high."""
+    xs = x
+    if len(xs) > 50000:
+        xs = np.random.default_rng(0).choice(xs, 50000, replace=False)
+    g = GaussianMixture(2, n_init=1, random_state=0).fit(xs.reshape(-1, 1))
+    m = g.means_.ravel()
+    v = g.covariances_.ravel()
+    return abs(m[1] - m[0]) / np.sqrt(0.5 * (v[0] + v[1]) + 1e-9)
 
 
 def main():
@@ -60,7 +67,7 @@ def main():
         }
         names = list(sig)
         rocs = {k: roc_auc_score(labels, v) for k, v in sig.items()}
-        meta = {k: tail_sep(v) for k, v in sig.items()}
+        meta = {k: gmm_sep(v) for k, v in sig.items()}
 
         hard_k = max(meta, key=meta.get)
         oracle_k = max(rocs, key=rocs.get)
@@ -75,7 +82,7 @@ def main():
 
         print(f"\n== {tgt} (base {labels.mean()*100:.1f}%) ==")
         for k in names:
-            print(f"  {k:>9}: ROC={rocs[k]:.3f}  tail_sep={meta[k]:6.2f}")
+            print(f"  {k:>9}: ROC={rocs[k]:.3f}  gmm_sep={meta[k]:6.2f}")
         flag = "OK" if hard_k == oracle_k else "MISS"
         print(f"  meta picks '{hard_k}' | oracle '{oracle_k}'  [{flag}]")
         print("  soft weights: " + ", ".join(f"{names[i]}={w[i]:.2f}" for i in range(3)))
