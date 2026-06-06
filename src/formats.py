@@ -10,21 +10,21 @@ import re
 # Canonical logparser format strings for the 16 LogHub systems.
 LOG_FORMATS = {
     "HDFS":        "<Date> <Time> <Pid> <Level> <Component>: <Content>",
-    "Hadoop":      "<Date> <Time> <Level> \[<Process>\] <Component>: <Content>",
+    "Hadoop":      "<Date> <Time> <Level> \\[<Process>\\] <Component>: <Content>",
     "Spark":       "<Date> <Time> <Level> <Component>: <Content>",
-    "Zookeeper":   "<Date> <Time> - <Level>  \[<Node>:<Component>@<Id>\] - <Content>",
+    "Zookeeper":   "<Date> <Time> - <Level>  \\[<Node>:<Component>@<Id>\\] - <Content>",
     "BGL":         "<Label> <Timestamp> <Date> <Node> <Time> <NodeRepeat> <Type> <Component> <Level> <Content>",
     "HPC":         "<LogId> <Node> <Component> <State> <Time> <Flag> <Content>",
     "Thunderbird": "<Label> <Id> <Date> <Admin> <Month> <Day> <Time> <AdminAddr> <Content>",
     "Windows":     "<Date> <Time>, <Level>                  <Component>    <Content>",
-    "Linux":       "<Month> <Date> <Time> <Level> <Component>(\[<PID>\])?: <Content>",
+    "Linux":       "<Month> <Date> <Time> <Level> <Component>(\\[<PID>\\])?: <Content>",
     "Android":     "<Date> <Time>  <Pid>  <Tid> <Level> <Component>: <Content>",
-    "Apache":      "\[<Time>\] \[<Level>\] <Content>",
-    "OpenSSH":     "<Date> <Day> <Time> <Component> sshd\[<Pid>\]: <Content>",
-    "OpenStack":   "<Logrecord> <Date> <Time> <Pid> <Level> <Component> \[<ADDR>\] <Content>",
-    "Mac":         "<Month>  <Date> <Time> <User> <Component>\[<PID>\]( \(<Address>\))?: <Content>",
-    "HealthApp":   "<Time>\|<Component>\|<Pid>\|<Content>",
-    "Proxifier":   "\[<Time>\] <Program> - <Content>",
+    "Apache":      "\\[<Time>\\] \\[<Level>\\] <Content>",
+    "OpenSSH":     "<Date> <Day> <Time> <Component> sshd\\[<Pid>\\]: <Content>",
+    "OpenStack":   "<Logrecord> <Date> <Time> <Pid> <Level> <Component> \\[<ADDR>\\] <Content>",
+    "Mac":         "<Month>  <Date> <Time> <User> <Component>\\[<PID>\\]( \\(<Address>\\))?: <Content>",
+    "HealthApp":   "<Time>\\|<Component>\\|<Pid>\\|<Content>",
+    "Proxifier":   "\\[<Time>\\] <Program> - <Content>",
 }
 
 # Systems whose first field is an alert label ('-' == normal, else anomaly).
@@ -39,7 +39,7 @@ def generate_logformat_regex(logformat):
     for k, part in enumerate(splitters):
         if k % 2 == 0:
             # literal between fields: collapse whitespace to flexible match
-            regex += re.sub(r"\s+", r"\s+", part)
+            regex += re.sub(r"\s+", r"\\s+", part)
         else:
             header = part.strip("<>")
             regex += "(?P<%s>.*?)" % header

@@ -5,7 +5,7 @@ training**. The interesting part isn't scale, it's the generalization trick and
 an honest **leave-one-system-out (LOSO)** evaluation that most papers quietly
 skip.
 
-> **📄 Full write-up: [REPORT.md](REPORT.md).** The short version: zero-shot
+> **Full write-up: [REPORT.md](REPORT.md).** The short version: zero-shot
 > transfer collapses and trivial baselines beat the learned model. Anomalies
 > fall into a taxonomy (contextual, point, marked), and each type is caught by a
 > different label-free signal (surprise, rarity, severity). Picking the right
@@ -72,9 +72,3 @@ Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
 | Naive transfer | train on one system, apply raw to another, and watch it collapse |
 | **LOSO zero-shot** | train on all-but-target with no target labels; this is the headline number |
 | Few-shot | LOSO plus fine-tuning on k=10/50 target examples, the practical sweet spot |
-
-## Budget
-
-~$10 RunPod, though you don't really need it. The expensive embedder is frozen
-and cached on CPU — the trained transformer is tiny (operates over 384-d vectors,
-~1M params) — so a full LOSO sweep is only a few GPU-hours.
