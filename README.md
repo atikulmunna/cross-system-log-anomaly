@@ -72,3 +72,34 @@ Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
 | Naive transfer | train on one system, apply raw to another, and watch it collapse |
 | **LOSO zero-shot** | train on all-but-target with no target labels; this is the headline number |
 | Few-shot | LOSO plus fine-tuning on k=10/50 target examples, the practical sweet spot |
+
+## Results
+
+Three labeled systems are held out one at a time. The full tables and discussion
+live in [REPORT.md](REPORT.md); the headlines are below. The figures are
+regenerated from the saved `out/<system>/scores.npz` with `python
+src/plot_results.py --out out`.
+
+**Each anomaly type has its own label-free signal, and none of them wins
+everywhere.** That is the whole point of the taxonomy: rarity catches HDFS
+(point anomalies), semantic severity catches BGL and Thunderbird (textually
+marked alerts), and the naive sum is dragged down when it dilutes the right
+signal.
+
+![Label-free signal ROC per held-out system](out/figs/signal_roc.png)
+
+| Held-out system | Best label-free signal | ROC-AUC |
+|---|---|---|
+| HDFS | rarity (point) | 0.89 |
+| BGL | severity (marked) | 0.85 |
+| Thunderbird | severity (marked) | 1.00 |
+
+Surprise and rarity are complementary on HDFS (Spearman -0.03), so their
+ensemble reaches ROC 0.985.
+
+**Label-free selection of the right signal fails, but a handful of labels fixes
+it.** A logistic combiner over the three z-scored signals, given k labeled
+examples per class, lifts macro ROC from 0.81 (equal-weight sum) to 0.94 at
+k=25, past the single-signal oracle (0.91).
+
+![Few-shot macro ROC vs k](out/figs/fewshot_curve.png)
