@@ -168,6 +168,38 @@ anomalies. HDFS severity has the *highest* GMM separation yet is
 anomaly-irrelevant. Distribution shape is not anomaly relevance, and selection is
 unsolvable from the unlabeled distribution alone.
 
+A second selector also fails: **cross-system combiner transfer**. The few-shot
+result (next section) shows a linear mix of the three signals is what is needed,
+so we fit one logistic combiner on the labeled *training* systems (each system's
+signals z-scored on its own) and apply it to the held-out target. No target
+labels are used, so it is still zero-shot.
+
+| Method | Macro ROC |
+|---|---|
+| Equal-weight sum | 0.809 |
+| Transferred combiner | **0.496** |
+| Single-signal oracle | 0.912 |
+
+It does *worse than chance on average*. With only three labeled systems, each
+dominated by a different anomaly type, leave-one-out always trains on two types
+and tests on the third. The combiner learns the training systems' signal
+preference and *anti-transfers* it: trained on {BGL, Thunderbird} it learns
+"trust severity, distrust rarity" and applies that to HDFS, whose best signal is
+rarity, scoring 0.187 (below random). The learned per-target weights make this
+explicit (surprise, rarity, severity):
+
+| Target | transfer ROC | learned weights |
+|---|---|---|
+| BGL | 0.831 | sev +1.34 (correct) |
+| HDFS | 0.187 | sev +3.25, rarity **-0.96** (wrong signal up-weighted) |
+| Thunderbird | 0.470 | rarity +1.02, sev +0.25 (under-weights severity) |
+
+So the right combination is genuinely *system-specific*: weights transfer only
+between systems of the same anomaly type, which a tiny, type-diverse pool never
+provides. This is further evidence that a few target labels (next section), not
+clever zero-shot transfer, is the practical fix. A larger pool covering each type
+might let transfer work; that is left to future work.
+
 ### 4.5 Few-shot resolves it
 
 A logistic combiner over the three z-scored signals, trained on *k* labeled
