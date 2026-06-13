@@ -160,7 +160,13 @@ def main():
     ap.add_argument("--max-len", type=int, default=512)
     ap.add_argument("--max-train-per-system", type=int, default=0,
                     help="cap sequences per training system (0 = no cap)")
+    ap.add_argument("--seed", type=int, default=None,
+                    help="seed RNGs for reproducible / multi-seed runs")
     args = ap.parse_args()
+
+    if args.seed is not None:
+        torch.manual_seed(args.seed)
+        np.random.seed(args.seed)
 
     vectors = load_vectors(args.out)
     every = all_systems(args.out)

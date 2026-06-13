@@ -36,7 +36,14 @@ def main():
     ap.add_argument("--d-model", type=int, default=128)
     ap.add_argument("--nlayers", type=int, default=3)
     ap.add_argument("--max-len", type=int, default=512)
+    ap.add_argument("--seed", type=int, default=None,
+                    help="seed RNGs and save scores_seed<N>.npz (for CIs)")
     args = ap.parse_args()
+
+    if args.seed is not None:
+        torch.manual_seed(args.seed)
+        np.random.seed(args.seed)
+    suffix = "" if args.seed is None else f"_seed{args.seed}"
 
     vectors = load_vectors(args.out)
     every = all_systems(args.out)
@@ -67,7 +74,7 @@ def main():
         ens = z(surprise) + z(rarity)
 
         np.savez(
-            f"{args.out}/{tgt}/scores.npz",
+            f"{args.out}/{tgt}/scores{suffix}.npz",
             surprise=surprise, rarity=rarity, ensemble=ens, labels=labels,
         )
 

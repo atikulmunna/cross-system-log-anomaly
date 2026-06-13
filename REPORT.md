@@ -229,6 +229,28 @@ few labels the learned weights are noisy, but it overtakes by k=10.
 | Single-signal oracle (upper bound) | 0.91 |
 | **Few-shot k=25** | **0.94** |
 
+### 4.7 Stability across seeds
+
+Re-running the full LOSO ensemble under four random seeds (model initialization
+and training-batch order) gives 95% t-interval confidence intervals. Only the
+*surprise* signal, and the fusions that use it, varies; rarity and severity are
+deterministic, so their CIs are exactly zero by construction (which is the point
+of the contrast).
+
+| Signal (macro ROC) | mean +/- 95% CI |
+|---|---|
+| surprise | 0.609 +/- 0.055 |
+| rarity | 0.673 +/- 0.000 |
+| severity | 0.815 +/- 0.000 |
+| equal-weight sum | **0.809 +/- 0.007** |
+
+The headline equal-weight sum is stable to +/-0.007 because the deterministic
+rarity and severity dominate it; the learned surprise signal is the noisy
+component, widest on BGL (0.594 +/- 0.144) and smallest on HDFS (0.729 +/-
+0.056). So the single-run figures elsewhere in this report are representative,
+with the caveat that any surprise-only number carries roughly +/-0.05 to 0.14 of
+seed noise. (Reproduce with `ensemble.py --seed N` then `aggregate_seeds.py`.)
+
 ## 5. Discussion & limitations
 
 - **BGL is genuinely the hardest** target (best around 0.85); its 1,822 templates
@@ -237,9 +259,12 @@ few labels the learned weights are noisy, but it overtakes by k=10.
   is reported as the honest metric.
 - **HealthApp** parses poorly under Drain (28k over-fragmented templates) yet did
   not degrade results, so the shared space is robust to a noisy pool member.
-- **Single-run figures.** Zero-shot and LOSO numbers are one run each (ROC
-  variance around 0.02 to 0.04); only few-shot is averaged over 20 draws.
-  Multiple seeds with confidence intervals are left to future work.
+- **Seed variance.** The zero-shot signals now carry 95% CIs over four seeds
+  (§4.7): the equal-weight sum is stable (+/-0.007) and rarity/severity are
+  deterministic, but the surprise signal alone swings by +/-0.05 to 0.14, so any
+  surprise-only figure should be read as approximate. Few-shot is separately
+  averaged over 20 support draws. Extending to more seeds and adding CIs to the
+  few-shot table is straightforward future work.
 - **Three labeled folds.** Conclusions rest on HDFS, BGL, and Thunderbird; a
   fourth fold (OpenStack) would strengthen the macro estimates.
 - The contribution is a **framework, a benchmark, and honest negatives**, not a
