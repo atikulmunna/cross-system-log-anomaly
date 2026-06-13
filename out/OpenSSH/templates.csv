@@ -1,0 +1,48 @@
+template_id,template
+1,reverse mapping checking getaddrinfo for <*> <*> failed - POSSIBLE BREAK-IN ATTEMPT!
+2,Invalid user <*> from <*>
+3,input_userauth_request: invalid user <*> [preauth]
+4,pam_unix(sshd:auth): check pass; user unknown
+5,pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= <*>
+6,Failed <*> for invalid user <*> from <*> port <*> ssh2
+7,Connection closed by <*> [preauth]
+8,Received disconnect from <*> 11: <*> <*> <*>
+9,pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= <*> <*>
+10,Failed password for <*> from <*> port <*> ssh2
+11,message repeated <*> times: [ Failed password for <*> from <*> port <*> ssh2]
+12,Disconnecting: Too many authentication failures for <*> [preauth]
+13,PAM <*> more authentication <*> logname= uid=0 euid=0 tty=ssh ruser= <*> <*>
+14,PAM service(sshd) ignoring max retries; <*> > 3
+15,Did not receive identification string from <*>
+16,error: Received disconnect from <*> 3: com.jcraft.jsch.JSchException: Auth <*> [preauth]
+17,Received disconnect from <*> 11: Closed due to user request. [preauth]
+18,PAM <*> more authentication <*> logname= uid=0 euid=0 tty=ssh ruser= <*>
+19,error: Received disconnect from 103.99.0.122: 14: No more user authentication methods available. [preauth]
+20,Accepted password for <*> from <*> port <*> ssh2
+21,pam_unix(sshd:session): session opened for user <*> by (uid=0)
+22,pam_unix(sshd:session): session closed for user <*>
+23,fatal: Write failed: Connection reset by peer [preauth]
+24,fatal: Read from socket failed: Connection reset by peer [preauth]
+25,error: Received disconnect from 191.96.249.68: 13: User request [preauth]
+26,Bad packet length 1819045217. [preauth]
+27,Disconnecting: Packet corrupt [preauth]
+28,Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+29,Received disconnect from <*> 11: [preauth]
+30,fatal: no hostkey alg [preauth]
+31,Bad protocol version identification <*> from <*> port <*>
+32,Bad protocol version identification <*> <*> <*> from <*> port <*>
+33,Invalid user from <*>
+34,input_userauth_request: invalid user [preauth]
+35,Failed <*> for invalid user from <*> port <*> ssh2
+36,error: Received disconnect from <*> <*> <*> <*> <*> <*> [preauth]
+37,Received disconnect from 67.160.100.130: 11:
+38,Received disconnect from <*> 11: <*> <*> <*> [preauth]
+39,error: Received disconnect from 195.154.45.62: 3: com.jcraft.jsch.JSchException: timeout in waiting for rekeying process. [preauth]
+40,error: connect_to <*> port 22: failed.
+41,Corrupted MAC on input. [preauth]
+42,error: Received disconnect from 212.83.176.1: 3: org.vngx.jsch.userauth.AuthCancelException: User authentication canceled by user [preauth]
+43,Received disconnect from <*> 11: disconnect [preauth]
+44,Server listening on <*> port <*>
+45,Received disconnect from <*> 11: Disconnect requested by Windows SSH Client.
+46,"Received disconnect from 139.59.209.18: 11: Normal Shutdown, Thank you for playing [preauth]"
+47,syslogin_perform_logout: logout() returned an error

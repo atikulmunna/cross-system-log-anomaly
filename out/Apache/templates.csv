@@ -1,0 +1,30 @@
+template_id,template
+1,LDAP: Built with OpenLDAP LDAP SDK
+2,LDAP: SSL support unavailable
+3,suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+4,Digest: generating secret for digest authentication ...
+5,Digest: done
+6,env.createBean2(): Factory error creating <*> ( <*> <*>
+7,config.update(): Can't create <*>
+8,mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+9,mod_security/1.9dev2 configured
+10,Apache/2.0.49 (Fedora) configured -- resuming normal operations
+11,jk2_init() Found child <*> in scoreboard slot <*>
+12,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+13,mod_jk child init 1 <*>
+14,[client <*> Directory index forbidden by rule: /var/www/html/
+15,[client <*> File does not exist: <*>
+16,jk2_init() Can't find child <*> in scoreboard
+17,[client <*> Invalid <*> in request <*> <*>
+18,[client <*> script not found or unable to stat: <*>
+19,mod_jk2 Shutting down
+20,"Graceful restart requested, doing restart"
+21,[client <*> request failed: URI too long (longer than 8190)
+22,mod_jk child workerEnv in error state <*>
+23,[client <*> request failed: error reading the headers
+24,[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+25,[client 210.245.151.81] Attempt to serve directory: /var/www/html/
+26,"child process <*> still did not exit, sending a SIGTERM"
+27,"[client 219.239.227.58] mod_security: Access denied with code 403. Error reading POST data, error_code=104 [hostname ""63.126.79.67""] [uri ""/xmlrpc.php""]"
+28,uriMap.mapUri() uri must start with /
+29,[client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /

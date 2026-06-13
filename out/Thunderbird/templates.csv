@@ -1,0 +1,1041 @@
+template_id,template
+1,<*> tftp: client does not accept options
+2,<*> warning: unable to look up public/pickup: No such file or directory
+3,<*> Connection broken to <*> reopening in 60 seconds
+4,<*> My unqualified host name <*> unknown; sleeping for retry
+5,<*> synchronized to <*> stratum <*>
+6,ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+7,ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+8,<*> session opened for user <*> by <*>
+9,<*> <*> <*> for <*> from <*> port <*> ssh2
+10,xinetd[18274]: START: <*> <*> from=10.100.4.251
+11,logger: Kickstart Install: Torque Mom and Maui speconf Tree
+12,logger: Kickstart: <*> <*>
+13,logger: Kickstart Install: <*> <*> <*> <*>
+14,logger: Kickstart: setup firstboot for <*> <*> <*>
+15,<*> pam_timestamp: updated timestamp file <*>
+16,<*> running '/usr/sbin/up2date --nox -i <*> with root privileges on behalf of 'root'
+17,ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+18,gmond: gmond <*> <*>
+19,logger: Kickstart Install: Setup to become a Tbird login
+20,logger: Kickstart Install: <*> <*> <*>
+21,<*> kernel time sync <*> <*>
+22,mysql_install_db: Installing all prepared tables
+23,nfs: Starting NFS services: succeeded
+24,nfs: <*> <*> succeeded
+25,ntpd: <*>
+26,ntpd: ntpd <*> <*>
+27,<*> Listening on interface <*> <*>
+28,<*> ntpd #2#@1.1190-r Mon Oct 11 09:15:58 EDT 2004 (1)
+29,<*> precision = 1.000 usec
+30,<*> signal_no_reset: signal 13 had flags 4000000
+31,<*> step time server <*> offset <*> sec
+32,mysql_install_db:
+33,mysql_install_db: /usr/bin/mysqladmin -u root -h tbird-admin1 password 'new-password'
+34,mysql_install_db: /usr/bin/mysqladmin -u root password 'new-password'
+35,mysql_install_db: Fill help tables
+36,mysql_install_db: PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+37,mysql_install_db: Please report any problems with the /usr/bin/mysqlbug script!
+38,mysql_install_db: See the manual for more instructions.
+39,mysql_install_db: Support MySQL by buying support/licenses at https://#4#
+40,mysql_install_db: The latest information about MySQL is available on the web at
+41,"mysql_install_db: To do so, start the server, then issue the following commands:"
+42,mysql_install_db: To start mysqld at boot time you have to copy support-files/mysql.server
+43,mysql_install_db: You can start the MySQL daemon with:
+44,mysql_install_db: You can test the MySQL daemon with the benchmarks in the 'sql-bench' directory:
+45,mysql_install_db: cd <*> ; <*> <*>
+46,mysql_install_db: http://#5#
+47,mysql_install_db: to the right place for your system
+48,mysqld: Initializing MySQL database: succeeded
+49,mysqld: <*> MySQL: succeeded
+50,dhcpd: All rights reserved.
+51,dhcpd: Copyright 2004 Internet Systems Consortium.
+52,"dhcpd: For info, please visit http://#6#/sw/dhcp/"
+53,dhcpd: Internet Systems Consortium DHCP Server V3.0.1
+54,dhcpd: <*> on <*>
+55,dhcpd: Wrote 0 deleted host decls to leases file.
+56,dhcpd: Wrote 0 leases to leases file.
+57,dhcpd: Wrote 0 new dynamic host decls to leases file.
+58,dhcpd: dhcpd <*> succeeded
+59,httpd: httpd <*> succeeded
+60,kernel: <*> avc: denied { read write } for <*> comm=ntpdate <*> <*> <*> scontext=user_u:system_r:ntpd_t <*> <*>
+61,logger: setup NTP client
+62,kernel: <*> avc: denied { <*> } for <*> <*> <*> <*> <*> scontext=user_u:system_r:ntpd_t <*> <*>
+63,kernel: <*> avc: denied { read } for <*> comm=ntpdate path=/tmp/biosdev (deleted) dev=ramfs <*> scontext=user_u:system_r:ntpd_t tcontext=user_u:object_r:ramfs_t tclass=blk_file
+64,"<*> configure: keyword ""authenticate"" unknown, line ignored"
+65,<*> frequency initialized <*> PPM from /var/lib/ntp/drift
+66,<*> data_thread() got not answer from any <*> datasource
+67,<*> running '/usr/sbin/up2date --nox -i -f kernel-devel' with root privileges on behalf of 'root'
+68,<*> unable to qualify my own domain name <*> -- using short name
+69,<*> session closed for user <*>
+70,"<*> <*> from=root, <*> class=0, nrcpts=1, <*> relay=#7#@localhost"
+71,"<*> <*> to=root, ctladdr=root (0/0), <*> <*> mailer=relay, <*> relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]"
+72,logger: Kickstart: setup the cisco (topspin) ib stack
+73,logger: Kickstart Install: TBIRD Dell FIRMWARE Update Module
+74,logger: Kickstart/Yast Install: Finished installation on localhost.localdomain
+75,exiting on signal 15
+76,<*> Local disconnected: Connection closed.
+77,<*> connection lost: 'Connection closed.'
+78,<*> RRD_update <*> <*> illegal attempt to update using time <*> when last update time is <*> (minimum one second step)
+79,dhcpd: DHCPDISCOVER from <*> via eth1: network <*> no free leases
+80,dhcpd: DHCPDISCOVER from <*> via <*>
+81,dhcpd: <*> on <*> to <*> via <*>
+82,dhcpd: DHCPREQUEST for <*> <*> from <*> via eth1: unknown lease <*>
+83,dhcpd: DHCPREQUEST for <*> <*> from <*> via <*>
+84,<*> START: tftp <*> <*>
+85,kernel: Lustre: <*> maximum lustre stack <*>
+86,kernel: Lustre: Echo OBD driver; #10#@#11#
+87,"kernel: Lustre: OBD class driver Build Version: #12#-19691231170000-PRISTINE-.f3home.#13#.build.2.6.buildir.BUILD.lustre-kernel-2.6.9.lustre.linux-2.6.9-1.4.5.6smp, #10#@#11#"
+88,"kernel: Lustre: Routing socket NAL loaded (Routing disabled, initial mem 0, incarnation <*>"
+89,"<*> started, listening on port 988"
+90,init: <*> to <*> <*>
+91,shutdown: shutting down for system <*>
+92,"rpc.mountd: Caught signal 15, un-registering and exiting."
+93,nfs: Shutting down NFS services: succeeded
+94,nfsd: last server has exited
+95,nfsd: unexporting all filesystems
+96,sshd: sshd -TERM succeeded
+97,<*> Received signal 15; terminating.
+98,netfs: <*> <*> filesystems: <*>
+99,<*> ntpd exiting on signal 15
+100,xinetd: xinetd <*> succeeded
+101,<*> Exiting...
+102,irqbalance: irqbalance startup succeeded
+103,kernel:
+104,kernel: Intel(R) Xeon(TM) CPU 3.60GHz stepping 03
+105,"kernel: <*> zone: <*> pages, LIFO <*>"
+106,kernel: Type: <*> ANSI SCSI revision: <*>
+107,kernel: Vendor: MegaRAID Model: LD 0 RAID0 <*> Rev: <*>
+108,kernel: Vendor: PE/PV Model: 1x2 SCSI BP Rev: 1.0
+109,kernel: BIOS-e820: <*> - <*> <*>
+110,kernel: BIOS-e820: <*> - <*> (ACPI data)
+111,kernel: <*> kernel module initialized successfully
+112,kernel: sda: sda1 sda2 sda3 sda4 < sda5 sda6 >
+113,kernel: <*> <*> public key <*>
+114,"kernel: - User ID: Red Hat, Inc. (Kernel Module GPG key)"
+115,kernel: ACPI wakeup devices:
+116,kernel: ACPI: (supports S0 S4 S5)
+117,kernel: ACPI: <*> (v001 DELL PE BKC 0x00000001 MSFT <*> @ <*>
+118,kernel: ACPI: HPET id: 0xffffffff base: 0xfed00000
+119,kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq <*> global_irq <*> <*> <*>
+120,kernel: ACPI: IOAPIC <*> <*> <*>
+121,kernel: ACPI: <*> used by override.
+122,kernel: ACPI: Interpreter enabled
+123,kernel: ACPI: LAPIC <*> <*> <*>
+124,kernel: ACPI: LAPIC_NMI <*> high edge lint[0x1])
+125,kernel: ACPI: Local APIC address 0xfee00000
+126,kernel: ACPI: PCI Interrupt Link <*> (IRQs 3 4 5 6 7 10 11 12) <*>
+127,kernel: ACPI: PCI Interrupt Link <*> (IRQs 3 4 5 6 <*> <*> <*> 12)
+128,"kernel: ACPI: PCI Interrupt Link <*> (IRQs 3 4 5 6 7 10 11 12) *0, disabled."
+129,kernel: ACPI: PCI <*> <*> <*> <*>
+130,"kernel: ACPI: PCI interrupt <*> -> GSI <*> (level, low) -> IRQ <*>"
+131,kernel: ACPI: Power Button (FF) [PWRF]
+132,kernel: ACPI: Processor <*> (supports C1)
+133,kernel: ACPI: RSDP (v000 DELL ) @ <*>
+134,kernel: ACPI: Subsystem revision 20040816
+135,kernel: <*> Using <*> for <*> routing
+136,kernel: Adding 13309844k swap on /dev/sda2. Priority:-1 extents:1
+137,"kernel: Attached scsi disk sda at scsi0, channel <*> id 0, lun 0"
+138,"kernel: Attached scsi generic <*> at scsi0, channel <*> id <*> lun 0, type <*>"
+139,kernel: BIOS-provided physical RAM map:
+140,kernel: Bootdata ok (command line is ro <*> tsc console=tty0 <*> rhgb quiet)
+141,kernel: Booting processor 1/6 rip 6000 rsp <*>
+142,kernel: <*> <*> node <*> 0000000000000000-00000001c0000000
+143,kernel: Brought up 2 CPUs
+144,kernel: Built 1 zonelists
+145,kernel: CPU0: Intel(R) Xeon(TM) CPU 3.60GHz stepping 03
+146,kernel: CPU: <*> <*> <*>
+147,"kernel: CPU: Trace cache: 12K uops, L1 D cache: 16K"
+148,kernel: Calibrating delay loop... <*> BogoMIPS <*>
+149,kernel: Capability LSM initialized as secondary
+150,kernel: Checking aperture...
+151,kernel: Console: colour VGA+ 80x25
+152,kernel: Copyright (c) 1999-2004 Intel Corporation.
+153,kernel: DMI 2.3 present.
+154,"kernel: Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)"
+155,kernel: Detected <*> MHz APIC timer.
+156,kernel: <*> hash table entries: <*> <*> <*> <*> bytes)
+157,kernel: EXT3 FS on <*> internal journal
+158,kernel: EXT3-fs: <*> <*> <*> on readonly <*>
+159,kernel: EXT3-fs: mounted filesystem with ordered data mode.
+160,kernel: EXT3-fs: recovery complete.
+161,kernel: EXT3-fs: write access #15# be enabled during recovery.
+162,kernel: Freeing unused kernel memory: 188k freed
+163,"kernel: IA32 emulation $Id: sys_ia32.c,v 1.32 2002/03/24 13:02:28 ak Exp $"
+164,"kernel: <*> apic_id <*> version 32, address <*> GSI <*>"
+165,"kernel: IP: routing cache hash table of 32768 buckets, 512Kbytes"
+166,kernel: Initializing <*>
+167,kernel: Initializing Cryptographic API
+168,kernel: Initializing IPsec netlink socket
+169,kernel: Intel E7520/7320/7525 detected.<6>pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+170,kernel: Intel(R) PRO/1000 Network Driver - version 6.0.54-k2-NAPI
+171,kernel: Kernel command line: ro <*> tsc console=tty0 <*> rhgb quiet
+172,kernel: Linux agpgart interface v0.100 (c) Dave Jones
+173,kernel: Linux version <*> <*> (gcc version 3.4.3 20050227 (Red Hat 3.4.3-22.1)) #1 SMP Tue <*> <*> <*> <*> 2005
+174,kernel: Loading keyring
+175,"kernel: Mellanox Tavor Device Driver is creating device ""InfiniHost0"" (domain=00, bus=08, devfn=00)"
+176,"kernel: Memory: <*> available <*> kernel code, 0k reserved, <*> data, 188k init)"
+177,kernel: NET: Registered protocol family <*>
+178,kernel: No NUMA configuration found
+179,kernel: No mptable found.
+180,kernel: On node 0 totalpages: <*>
+181,kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+182,kernel: PCI0 PALO PBLO VPR0 PBHI PICH
+183,kernel: PCI: Probing PCI hardware (bus 00)
+184,kernel: PCI: Setting latency timer of device <*> to 64
+185,kernel: PCI: Transparent bridge - 0000:00:1e.0
+186,kernel: PCI: Using <*> <*> <*>
+187,kernel: PCI: cache line size of 128 is not supported by device 0000:00:1d.7
+188,kernel: Placing software IO TLB between <*> - <*>
+189,kernel: Probing IDE interface <*>
+190,kernel: Processor <*> 15:4 APIC version 16
+191,kernel: RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize
+192,kernel: Real Time Clock Driver v1.12
+193,kernel: SCSI device sda: <*> 512-byte hdwr sectors <*> MB)
+194,kernel: SCSI subsystem initialized
+195,kernel: SELinux: <*> <*> <*>
+196,kernel: SELinux: Initializing.
+197,kernel: SELinux: Starting in permissive mode
+198,kernel: Security Scaffold v1.0.0 initialized
+199,"kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled"
+200,kernel: Setting APIC routing to flat
+201,kernel: TCP: Hash tables configured (established 262144 bind 65536)
+202,"kernel: There is already a security framework initialized, register_security failed."
+203,"kernel: Total HugeTLB memory allocated, 0"
+204,kernel: Total of 2 processors activated <*> BogoMIPS).
+205,kernel: USB Universal Host Controller Interface driver v2.2
+206,kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+207,kernel: Using ACPI (MADT) for SMP configuration information
+208,kernel: Using <*> APIC <*> <*>
+209,kernel: Using cfq io scheduler
+210,kernel: VFS: Disk quotas dquot_6.5.1
+211,kernel: Warning: <*> returned 0!
+212,kernel: <*> find a suitable network device; setting lid_base to 1
+213,kernel: <*> NMI <*> ... <*>
+214,kernel: <*> initialized
+215,kernel: audit: initializing netlink socket (disabled)
+216,kernel: checking TSC synchronization across 2 CPUs: passed.
+217,kernel: checking if image is initramfs... it is
+218,kernel: device-mapper: 4.4.0-ioctl (2005-01-12) initialised: dm-#16#@#17#
+219,kernel: divert: allocating divert_blk for <*>
+220,kernel: divert: not allocating divert_blk for non-ethernet device <*>
+221,kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+222,kernel: e1000: <*> e1000_probe: Intel(R) PRO/1000 Network Connection
+223,kernel: e1000: <*> e1000_watchdog: NIC Link is Up <*> Mbps Full Duplex
+224,kernel: <*> <*> <*> Host Controller
+225,"kernel: ehci_hcd 0000:00:1d.7: USB 2.0 enabled, EHCI 1.00, driver 2004-May-10"
+226,"kernel: ehci_hcd 0000:00:1d.7: irq 193, pci mem <*>"
+227,"kernel: <*> <*> new USB bus registered, assigned bus number <*>"
+228,kernel: floppy0: no floppy controllers found
+229,kernel: hub 1-0:1.0: <*> <*> <*>
+230,kernel: hub 1-3:1.0: <*> <*> <*>
+231,kernel: hub 2-0:1.0: <*> <*> <*>
+232,kernel: hub 3-0:1.0: <*> <*> <*>
+233,kernel: hub 4-0:1.0: <*> <*> <*>
+234,kernel: hw_random hardware driver 1.0.0 loaded
+235,kernel: <*> InfiniHost0 port <*>
+236,kernel: ide-floppy driver 0.99.newide
+237,kernel: ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+238,kernel: inserting floppy driver for <*>
+239,kernel: ip_tables: (C) 2000-2002 Netfilter core team
+240,kernel: kjournald starting. Commit interval 5 seconds
+241,"kernel: klogd 1.4.1, log source = /proc/kmsg started."
+242,kernel: md: <*> <*> <*>
+243,kernel: md: autorun ...
+244,"kernel: md: md driver 0.90.0 MAX_MD_DEVS=256, MD_SB_DISKS=27"
+245,kernel: megaraid cmm: #18# (Release Date: Mon Mar 7 00:01:03 EST 2005)
+246,kernel: megaraid: #19# (Release Date: Mon Mar 07 12:27:22 EST 2005)
+247,kernel: megaraid: fw <*> bios <*>
+248,kernel: megaraid: probe new device 0x1028:0x0013:0x1028:0x016c: bus 2:slot 14:func 0
+249,kernel: mice: PS/2 mouse device common for all mice
+250,kernel: mtrr: v2.0 (20020519)
+251,kernel: per-CPU timeslice cutoff: <*> usecs.
+252,kernel: scsi0 : LSI Logic MegaRAID driver
+253,kernel: scsi[0]: scanning scsi channel 0 [Phy 0] for non-raid devices
+254,kernel: scsi[0]: scanning scsi channel 1 [virtual] for logical drives
+255,kernel: sda: asking for cache data failed
+256,kernel: sda: assuming drive cache: write through
+257,kernel: selinux_register_security: Registering secondary module capability
+258,"kernel: serio: i8042 <*> port at 0x60,0x64 irq <*>"
+259,kernel: task migration cache decay timeout: 1 msecs.
+260,kernel: time.c: Detected <*> MHz processor.
+261,kernel: time.c: Using 14.318180 MHz HPET timer.
+262,kernel: time.c: Using HPET based timekeeping.
+263,kernel: <*> module license <*> taints kernel.
+264,kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a <*>
+265,kernel: uhci_hcd <*> irq <*> io base <*>
+266,kernel: usb <*> new <*> speed USB device using address <*>
+267,kernel: usbcore: registered new driver <*>
+268,kernel: using mwait in idle threads.
+269,nfslock: <*> <*> succeeded
+270,portmap: portmap <*> succeeded
+271,<*> Version 1.0.6 Starting
+272,syslog: <*> startup succeeded
+273,syslogd 1.4.1: restart.
+274,rc: Starting <*> succeeded
+275,rpcidmapd: rpc.idmapd <*> succeeded
+276,ts_fixup:
+277,ts_fixup: Creating Topspin /dev entries:
+278,date: <*> <*> <*> <*> MST 2005
+279,"fsck: <*> clean, <*> files, <*> blocks"
+280,fsck: <*> recovering journal
+281,fsck: Checking all file systems.
+282,fsck: [/sbin/fsck.ext3 (1) -- <*> fsck.ext3 -a <*>
+283,init: Entering runlevel: 3
+284,kernel: i2c /dev entries driver
+285,lvm.static: No volume groups found
+286,mount.panfs: bindcache: failed init IPS: 0x5 (Out of memory)
+287,"mount.panfs: pan_ips: error -- cfg target addresses, 0x5 (Out of memory), err_loc=1, rhel_4_amd64/release/build/panfs/ips/pan_ips_cfg.c:294"
+288,"mount.panfs: pan_ips: error -- real init, 0x5 (Out of memory), err_loc=3, <*>"
+289,mount: bindcache: failed init IPS: 0x5 (Out of memory)
+290,mount: <*> <*> <*> <*> <*> 0x5 (Out of memory)
+291,mount: mount.panfs error: mount request rejected because client-realm clock skew exceeds 10 seconds
+292,network: Bringing up <*> <*> <*>
+293,network: Setting network parameters: succeeded
+294,rc.sysinit: -e
+295,rc.sysinit: Checking filesystems succeeded
+296,rc.sysinit: <*> <*> <*> succeeded
+297,rc.sysinit: Enabling local filesystem quotas: succeeded
+298,rc.sysinit: Mounting local filesystems: <*>
+299,rc.sysinit: Remounting root filesystem in read-write mode: succeeded
+300,rc.sysinit: Setting clock (localtime): <*> <*> <*> <*> MST 2005 succeeded
+301,rc.sysinit: Setting up Logical Volume Management: succeeded
+302,smartd: smartd <*> <*>
+303,<*> Configuration file /etc/smartd.conf parsed.
+304,"<*> Device: /dev/sda, Bad IEC (SMART) mode page, err=5, skip device"
+305,"<*> Device: /dev/sda, opened"
+306,<*> Home page is http://#20#/
+307,<*> Opened configuration file /etc/smartd.conf
+308,<*> Unable to register SCSI device /dev/sda at line 1 of file /etc/smartd.conf
+309,<*> Unable to register device /dev/sda (no Directive -d removable). Exiting.
+310,<*> smartd version 5.33 [x86_64-redhat-linux-gnu] Copyright (C) 2002-4 Bruce Allen
+311,start_udev: Starting udev: succeeded
+312,sysctl: <*> = <*>
+313,<*> starting udevd daemon
+314,netfs: Unmounting NFS filesystems (retry): succeeded
+315,acpid: acpid <*> succeeded
+316,snmpd: snmpd <*> succeeded
+317,instsvcdrv: <*> device driver <*>
+318,<*> NET-SNMP version 5.1.2
+319,Server Administrator: Instrumentation Service EventID: 1000 Server Administrator starting
+320,Server Administrator: Instrumentation Service EventID: 1001 Server Administrator startup complete
+321,dataeng: <*> <*> succeeded
+322,kernel: Disabled Privacy Extensions on device <*>
+323,kernel: IPv6 over IPv4 tunneling driver
+324,sshd: succeeded
+325,<*> Server listening on :: port 22.
+326,<*> error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+327,<*> Reading included configuration file: <*> <*> <*>
+328,<*> Started working: <*> available <*>
+329,xinetd[2240]: removing <*>
+330,<*> xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+331,crond: crond <*> <*>
+332,<*> (CRON) STARTUP (V5.0)
+333,pbs_mom: pbs_mom <*> succeeded
+334,messagebus: messagebus <*> <*>
+335,omsad: omsad32 <*> succeeded
+336,haldaemon: haldaemon <*> <*>
+337,<*> [smux_accept] accepted fd 13 from <*>
+338,"<*> accepted smux peer: oid SNMPv2-SMI::enterprises.674.10892.1, password , descr Systems Management SNMP MIB Plug-in Manager"
+339,<*> removed all generated mount points
+340,"<*> Caught signal 15, un-registering and exiting."
+341,RPC: failed to contact portmap (errno -101).
+342,RPC: sendmsg returned error 101
+343,gmetad: gmetad <*> succeeded
+344,killall:
+345,killall: Shutting down GANGLIA gmetad:
+346,killall: Stopping syslog-ng:
+347,killall: [
+348,network: Shutting down <*> <*> succeeded
+349,portmap: RPC call returned error 101
+350,<*> syslog-ng version <*> going down
+351,<*> connection from <*>
+352,<*> Kerberos password <*> for user <*> <*>
+353,<*> Password authentication for user <*> accepted.
+354,logger: Install: apply updates
+355,logger: Kickstart: <*> <*> <*>
+356,logger: Kickstart: setup soft links and NFS mounts
+357,<*> running '/usr/sbin/up2date-config' with root privileges on behalf of 'root'
+358,kernel: <*> avc: denied { write } for <*> <*> name=log dev=ram0 <*> <*> tcontext=user_u:object_r:file_t tclass=sock_file
+359,logger: Kickstart Install: <*> <*>
+360,syslog: klogd shutdown <*>
+361,<*> START: rsync <*> <*>
+362,logger: Install: Removing tftpboot installation link from 10.100.32.250
+363,<*> Package Release <*> Package Description=Dell <*> <*> <*> <*> Support Log <*> Exit code = 2 (Reboot required)
+364,<*> Got trap from peer on fd 13
+365,logger: installing panasas drivers
+366,kernel: PanFS Client version: rhel_4_amd64/release <*> SMP
+367,kernel: pan_common: <*> <*>
+368,kernel: pan_common: registered major number <*> for device panasas
+369,"kernel: pan_kmod: <*> subdev 0x78 (""PANASAS kernel trace facility"")"
+370,kernel: pan_trace: panfs trace buffer <*> added.
+371,kernel: panfs mount: Byte range locking is turned ON
+372,kernel: panfs mount: Directory Caching is turned ON
+373,kernel: panfs mount: Dribble Writes mode is enabled
+374,"kernel: panfs mount: If you are running a GenuineIntel kernel, you may get an oops."
+375,kernel: panfs mount: Read Ahead is turned ON at level 1
+376,kernel: panfs mount: loading a AuthenticAMD CPU panfs.o kernel module on a GenuineIntel CPU
+377,"kernel: <*> no version for ""struct_module"" found: kernel tainted."
+378,mount.panfs: mount.panfs: started PanFS device [panfs://#27#/home]
+379,Server Administrator: Instrumentation Service EventID: 1052 Temperature sensor returned to a normal value Sensor location: BMC <*> Temp Chassis location: Main System Chassis Previous state was: Unknown Temperature sensor value (in Degrees Celsius): <*>
+380,Server Administrator: Instrumentation Service EventID: <*> Temperature sensor <*> <*> <*> <*> <*> <*> <*> <*> Temp Chassis location: Main System Chassis Previous state was: Unknown Temperature sensor value (in Degrees Celsius): <*>
+381,firstboot: succeeded
+382,<*> RRD_update <*> illegal attempt to update using time <*> when last update time is <*> (minimum one second step)
+383,ntpd[1505]: synchronisation lost
+384,<*> (root) CMD <*> <*>
+385,<*> User <*> coming from <*> authenticated.
+386,<*> Now running on <*> privileges.
+387,"<*> Device: /dev/sda, Temperature changed <*> Celsius to <*> Celsius since last report"
+388,<*> STATS: dropped <*>
+389,<*> process_limit: processing <*> <*> 32768 for DEFAULT
+390,<*> reading settings from '/etc/security/limits.conf'
+391,<*> time reset <*> s
+392,<*> Received SNMP packet(s) from #34#
+393,- Added public key <*>
+394,- User ID: CentOS-4 (Kernel Module GPG key)
+395,ACPI wakeup devices:
+396,ACPI: (supports S0 S4 S5)
+397,ACPI: <*> (v001 DELL PE BKC 0x00000001 MSFT <*> @ <*>
+398,ACPI: HPET id: 0xffffffff base: 0xfed00000
+399,ACPI: INT_SRC_OVR (bus 0 bus_irq <*> global_irq <*> <*> <*>
+400,ACPI: IOAPIC <*> <*> <*>
+401,ACPI: <*> used by override.
+402,ACPI: Interpreter enabled
+403,ACPI: LAPIC <*> <*> enabled)
+404,ACPI: LAPIC_NMI <*> high edge lint[0x1])
+405,ACPI: Local APIC address 0xfee00000
+406,ACPI: PCI Interrupt Link <*> (IRQs 3 4 5 6 7 10 11 12) <*>
+407,ACPI: PCI Interrupt Link <*> (IRQs 3 4 5 6 <*> <*> <*> 12)
+408,"ACPI: PCI Interrupt Link <*> (IRQs 3 4 5 6 7 10 11 12) *0, disabled."
+409,ACPI: PCI Interrupt Routing Table <*>
+410,ACPI: PCI Root Bridge [PCI0] (00:00)
+411,"ACPI: PCI interrupt <*> -> GSI <*> (level, low) -> IRQ <*>"
+412,ACPI: Power Button (FF) [PWRF]
+413,ACPI: Processor <*> (supports C1)
+414,ACPI: RSDP (v000 DELL ) @ 0x00000000000fd650
+415,ACPI: Subsystem revision 20040816
+416,ACPI: Using IOAPIC for interrupt routing
+417,Adding <*> swap on <*> Priority:-1 extents:1
+418,"Attached scsi disk sda at scsi0, channel 1, id 0, lun 0"
+419,"Attached scsi generic <*> at scsi0, channel <*> id <*> lun 0, type <*>"
+420,BIOS-e820: <*> - <*> <*>
+421,BIOS-e820: 00000000cffc0000 - 00000000cffcfc00 (ACPI data)
+422,BIOS-provided physical RAM map:
+423,"Bootdata ok (command line is root=LABEL=/ initrd=/x86_64/initrd-2.6.9-5.0.5.EL-lustre-1.4.2-perfctr-admin console=tty0 console=ttyS0,19200 fastboot BOOT_IMAGE=/x86_64/vmlinuz-2.6.9-5.0.5.EL-lustre-1.4.2-perfctr )"
+424,Booting processor <*> rip 6000 rsp <*>
+425,Bootmem setup node 0 0000000000000000-0000000330000000
+426,Brought up 4 CPUs
+427,Built 1 zonelists
+428,CPU0: Intel(R) Xeon(TM) CPU 3.60GHz stepping 03
+429,CPU: L2 cache: 2048K
+430,CPU: Physical Processor ID: <*>
+431,"CPU: Trace cache: 12K uops, L1 D cache: 16K"
+432,Calibrating delay loop... <*> BogoMIPS <*>
+433,Capability LSM initialized as secondary
+434,Checking aperture...
+435,Console: colour VGA+ 80x25
+436,Copyright (c) 1999-2004 Intel Corporation.
+437,"DMA zone: 4096 pages, LIFO batch:1"
+438,"Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes)"
+439,Detected 12.469 MHz APIC timer.
+440,"Dquot-cache hash table entries: 512 (order 0, 4096 bytes)"
+441,EXT3 FS on <*> internal journal
+442,EXT3-fs: mounted filesystem with ordered data mode.
+443,Faking a node at 0000000000000000-0000000330000000
+444,Freeing unused kernel memory: <*> freed
+445,"HighMem zone: 0 pages, LIFO batch:1"
+446,"IA32 emulation $Id: sys_ia32.c,v 1.32 2002/03/24 13:02:28 ak Exp $"
+447,"<*> apic_id <*> version 32, address <*> GSI <*>"
+448,"IP: routing cache hash table of <*> buckets, <*>"
+449,Initializing <*>
+450,Initializing Cryptographic API
+451,Initializing IPsec netlink socket
+452,"Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes)"
+453,Installing knfsd (copyright (C) 1996 #35#@monad.swb.de).
+454,Intel E7520/7320/7525 detected.<6>pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+455,Intel(R) PRO/1000 Network Driver - version <*>
+456,Intel(R) Xeon(TM) CPU 3.60GHz stepping 03
+457,"Kernel command line: root=LABEL=/ initrd=/x86_64/initrd-2.6.9-5.0.5.EL-lustre-1.4.2-perfctr-admin console=tty0 console=ttyS0,19200 fastboot BOOT_IMAGE=/x86_64/vmlinuz-2.6.9-5.0.5.EL-lustre-1.4.2-perfctr"
+458,Linux agpgart interface v0.100 (c) Dave Jones
+459,Linux version 2.6.9-5.0.5.EL-lustre-1.4.2-perfctr (#7#@talogin1) (gcc version 3.4.3 20041212 (Red Hat 3.4.3-9.EL4)) #2 SMP Tue Jun 14 00:58:50 PDT 2005
+460,Loading keyring
+461,"Memory: 12302088k/13369344k available (2341k kernel code, 0k reserved, 924k data, 196k init)"
+462,"Mount-cache hash table entries: 256 (order: 0, 4096 bytes)"
+463,NET: Registered protocol family <*>
+464,No NUMA configuration found
+465,No mptable found.
+466,"Normal zone: 3338240 pages, LIFO batch:16"
+467,On node 0 totalpages: 3342336
+468,PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+469,PCI0 PALO PBLO VPR0 PBHI PICH
+470,PCI: Probing PCI hardware (bus 00)
+471,PCI: Transparent bridge - 0000:00:1e.0
+472,PCI: Using ACPI for IRQ routing
+473,PCI: Using <*> <*> <*>
+474,"PID hash table entries: 4096 (order: 12, 131072 bytes)"
+475,Placing software IO TLB between 0xdb63000 - 0x11b63000
+476,Probing IDE interface <*>
+477,Processor <*> 15:4 APIC version 16
+478,RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize
+479,RAMDISK: Compressed image found at block 0
+480,Real Time Clock Driver v1.12
+481,SCSI device sda: <*> 512-byte hdwr sectors <*> MB)
+482,SCSI subsystem initialized
+483,SELinux: Disabled at runtime.
+484,SELinux: Initializing.
+485,SELinux: <*> netfilter hooks
+486,SELinux: Starting in permissive mode
+487,Security Scaffold v1.0.0 initialized
+488,"Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled"
+489,TCP: Hash tables configured (established 262144 bind 65536)
+490,"There is already a security framework initialized, register_security failed."
+491,"Total HugeTLB memory allocated, 0"
+492,Total of 4 processors activated (28655.61 BogoMIPS).
+493,Type: <*> ANSI SCSI revision: 02
+494,Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+495,Using ACPI (MADT) for SMP configuration information
+496,Using <*> APIC <*> <*>
+497,Using cfq io scheduler
+498,VFS: Disk quotas dquot_6.5.1
+499,VFS: Mounted root (ext2 filesystem).
+500,Vendor: MegaRAID Model: LD 0 <*> <*> Rev: 516A
+501,Vendor: PE/PV Model: 1x2 SCSI BP Rev: 1.0
+502,activating NMI Watchdog ... done.
+503,<*> initialized
+504,audit: initializing netlink socket (disabled)
+505,checking TSC synchronization across 4 CPUs: passed.
+506,checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+507,device-mapper: <*> <*> initialised: #36#@#37#
+508,divert: allocating divert_blk for <*>
+509,divert: not allocating divert_blk for non-ethernet device <*>
+510,drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+511,e1000: <*> e1000_probe: Intel(R) PRO/1000 Network Connection
+512,e1000: <*> e1000_watchdog: NIC Link is Up 1000 Mbps Full Duplex
+513,floppy0: no floppy controllers found
+514,hw_random: RNG not detected
+515,ide-floppy driver 0.99.newide
+516,<*> Wait for ready failed before probe !
+517,ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+518,inserting floppy driver for <*>
+519,ioctl32(fdisk:515): Unknown cmd fd(5) cmd(80081272){00} arg(ffffda44) on /dev/sda
+520,ip_tables: (C) 2000-2002 Netfilter core team
+521,kjournald starting. Commit interval 5 seconds
+522,ksign: Installing public key data
+523,md: ... autorun DONE.
+524,md: Autodetecting RAID arrays.
+525,md: autorun ...
+526,"md: md driver 0.90.0 MAX_MD_DEVS=256, MD_SB_DISKS=27"
+527,megaraid cmm: <*> (Release Date: Fri <*> <*> <*> EST <*>
+528,megaraid: #39# (Release Date: Mon Sep 27 22:15:07 EDT 2004)
+529,megaraid: fw version:[516A] bios version:[H418]
+530,megaraid: probe new device 0x1028:0x0013:0x1028:0x016c: bus 2:slot 14:func 0
+531,mice: PS/2 mouse device common for all mice
+532,mtrr: v2.0 (20020519)
+533,per-CPU timeslice cutoff: 852.05 usecs.
+534,scsi0 : LSI Logic MegaRAID driver
+535,scsi[0]: scanning scsi channel 0 [Phy 0] for non-raid devices
+536,scsi[0]: scanning scsi channel 1 [virtual] for logical drives
+537,sda: asking for cache data failed
+538,sda: assuming drive cache: write through
+539,sda: sda1 sda2 sda3 sda4
+540,selinux_register_security: Registering secondary module capability
+541,"serio: i8042 <*> port at 0x60,0x64 irq <*>"
+542,syslog-ng: syslog-ng startup succeeded
+543,<*> syslog-ng version 1.6.7 starting
+544,task migration cache decay timeout: 1 msecs.
+545,testing NMI watchdog ... OK.
+546,time.c: Detected <*> MHz processor.
+547,time.c: Using 14.318180 MHz HPET timer.
+548,time.c: Using HPET based timekeeping.
+549,ttyS0 at I/O 0x3f8 (irq = 4) is a NS16550A
+550,usbcore: registered new driver <*>
+551,using mwait in idle threads.
+552,vesafb: probe of vesafb0 failed with error -6
+553,gmetad:
+554,gmetad: Warning: we failed to resolve data source name an14 an15 an16 an17 an18 an19 an20 an21 an22 an23 an24 an25 an26 an27 an28 an29 an30 an31 an32 an33 an34 an35 an36 an37 an38 an39 an40 an41 an42 an43 an44 an45 an46 an47 an48 an49 an50 an51 an52 an53 an54 an55 an56 an57 an58 an59 an60 an61 an62 an63 an64 an65 an66 an67 an68 an69 an70 an71 an72 an73 an74 an75 an76 an77 an78 an79 an80 an81 an82 an83 an84 an85 an86 an87 an88 an89 an90 an91 an92 an93 an94 an95 an96 an97 an98 an99 an100 an101 an102 an103 an104 an105 an106 an107 an108 an109 an110 an111 an112 an113 an114 an115 an116 an117 an118 an119 an120 an121 an122 an123 an124 an125 an126 an127 an128
+555,gmetad: Warning: we failed to resolve data source name an142 an143 an144 an145 an146 an147 an148 an149 an150 an151 an152 an153 an154 an155 an156 an157 an158 an159 an160 an161 an162 an163 an164 an165 an166 an167 an168 an169 an170 an171 an172 an173 an174 an175 an176 an177 an178 an179 an180 an181 an182 an183 an184 an185 an186 an187 an188 an189 an190 an191 an192 an193 an194 an195 an196 an197 an198 an199 an200 an201 an202 an203 an204 an205 an206 an207 an208 an209 an210 an211 an212 an213 an214 an215 an216 an217 an218 an219 an220 an221 an222 an223 an224 an225 an226 an227 an228 an229 an230 an231 an232 an233 an234 an235 an236 an237 an238 an239 an240 an241 an242 an243 an244 an245 an246 an247 an248 an249 an250 an251 an252 an253 an254 an255 an256
+556,gmetad: Warning: we failed to resolve data source name an270 an271 an272 an273 an274 an275 an276 an277 an278 an279 an280 an281 an282 an283 an284 an285 an286 an287 an288 an289 an290 an291 an292 an293 an294 an295 an296 an297 an298 an299 an300 an301 an302 an303 an304 an305 an306 an307 an308 an309 an310 an311 an312 an313 an314 an315 an316 an317 an318 an319 an320 an321 an322 an323 an324 an325 an326 an327 an328 an329 an330 an331 an332 an333 an334 an335 an336 an337 an338 an339 an340 an341 an342 an343 an344 an345 an346 an347 an348 an349 an350 an351 an352 an353 an354 an355 an356 an357 an358 an359 an360 an361 an362 an363 an364 an365 an366 an367 an368 an369 an370 an371 an372 an373 an374 an375 an376 an377 an378 an379 an380 an381 an382 an383 an384
+557,gmetad: Warning: we failed to resolve data source name an398 an399 an400 an401 an402 an403 an404 an405 an406 an407 an408 an409 an410 an411 an412 an413 an414 an415 an416 an417 an418 an419 an420 an421 an422 an423 an424 an425 an426 an427 an428 an429 an430 an431 an432 an433 an434 an435 an436 an437 an438 an439 an440 an441 an442 an443 an444 an445 an446 an447 an448 an449 an450 an451 an452 an453 an454 an455 an456 an457 an458 an459 an460 an461 an462 an463 an464 an465 an466 an467 an468 an469 an470 an471 an472 an473 an474 an475 an476 an477 an478 an479 an480 an481 an482 an483 an484 an485 an486 an487 an488 an489 an490 an491 an492 an493 an494 an495 an496 an497 an498 an499 an500 an501 an502 an503 an504 an505 an506 an507 an508 an509 an510 an511 an512
+558,gmetad: Warning: we failed to resolve data source name an526 an527 an528 an529 an530 an531 an532 an533 an534 an535 an536 an537 an538 an539 an540 an541 an542 an543 an544 an545 an546 an547 an548 an549 an550 an551 an552 an553 an554 an555 an556 an557 an558 an559 an560 an561 an562 an563 an564 an565 an566 an567 an568 an569 an570 an571 an572 an573 an574 an575 an576 an577 an578 an579 an580 an581 an582 an583 an584 an585 an586 an587 an588 an589 an590 an591 an592 an593 an594 an595 an596 an597 an598 an599 an600 an601 an602 an603 an604 an605 an606 an607 an608 an609 an610 an611 an612 an613 an614 an615 an616 an617 an618 an619 an620 an621 an622 an623 an624 an625 an626 an627 an628 an629 an630 an631 an632 an633 an634 an635 an636 an637 an638 an639 an640
+559,gmetad: Warning: we failed to resolve data source name an654 an655 an656 an657 an658 an659 an660 an661 an662 an663 an664 an665 an666 an667 an668 an669 an670 an671 an672 an673 an674 an675 an676 an677 an678 an679 an680 an681 an682 an683 an684 an685 an686 an687 an688 an689 an690 an691 an692 an693 an694 an695 an696 an697 an698 an699 an700 an701 an702 an703 an704 an705 an706 an707 an708 an709 an710 an711 an712 an713 an714 an715 an716 an717 an718 an719 an720 an721 an722 an723 an724 an725 an726 an727 an728 an729 an730 an731 an732 an733 an734 an735 an736 an737 an738 an739 an740 an741 an742 an743 an744 an745 an746 an747 an748 an749 an750 an751 an752 an753 an754 an755 an756 an757 an758 an759 an760 an761 an762 an763 an764 an765 an766 an767 an768
+560,gmetad: Warning: we failed to resolve data source name an782 an783 an784 an785 an786 an787 an788 an789 an790 an791 an792 an793 an794 an795 an796 an797 an798 an799 an800 an801 an802 an803 an804 an805 an806 an807 an808 an809 an810 an811 an812 an813 an814 an815 an816 an817 an818 an819 an820 an821 an822 an823 an824 an825 an826 an827 an828 an829 an830 an831 an832 an833 an834 an835 an836 an837 an838 an839 an840 an841 an842 an843 an844 an845 an846 an847 an848 an849 an850 an851 an852 an853 an854 an855 an856 an857 an858 an859 an860 an861 an862 an863 an864 an865 an866 an867 an868 an869 an870 an871 an872 an873 an874 an875 an876 an877 an878 an879 an880 an881 an882 an883 an884 an885 an886 an887 an888 an889 an890 an891 an892 an893 an894 an895 an896
+561,gmetad: Warning: we failed to resolve data source name an910 an911 an912 an913 an914 an915 an916 an917 an918 an919 an920 an921 an922 an923 an924 an925 an926 an927 an928 an929 an930 an931 an932 an933 an934 an935 an936 an937 an938 an939 an940 an941 an942 an943 an944 an945 an946 an947 an948 an949 an950 an951 an952 an953 an954 an955 an956 an957 an958 an959 an960 an961 an962 an963 an964 an965 an966 an967 an968 an969 an970 an971 an972 an973 an974 an975 an976 an977 an978 an979 an980 an981 an982 an983 an984 an985 an986 an987 an988 an989 an990 an991 an992 an993 an994 an995 an996 an997 an998 an999 an1000 an1001 an1002 an1003 an1004 an1005 an1006 an1007 an1008 an1009 an1010 an1011 an1012 an1013 an1014 an1015 an1016 an1017 an1018 an1019 an1020 an1021 an1022 an1023 an1024
+562,gmetad: Warning: we failed to resolve data source name bn14 bn15 bn16 bn17 bn18 bn19 bn20 bn21 bn22 bn23 bn24 bn25 bn26 bn27 bn28 bn29 bn30 bn31 bn32 bn33 bn34 bn35 bn36 bn37 bn38 bn39 bn40 bn41 bn42 bn43 bn44 bn45 bn46 bn47 bn48 bn49 bn50 bn51 bn52 bn53 bn54 bn55 bn56 bn57 bn58 bn59 bn60 bn61 bn62 bn63 bn64 bn65 bn66 bn67 bn68 bn69 bn70 bn71 bn72 bn73 bn74 bn75 bn76 bn77 bn78 bn79 bn80 bn81 bn82 bn83 bn84 bn85 bn86 bn87 bn88 bn89 bn90 bn91 bn92 bn93 bn94 bn95 bn96 bn97 bn98 bn99 bn100 bn101 bn102 bn103 bn104 bn105 bn106 bn107 bn108 bn109 bn110 bn111 bn112 bn113 bn114 bn115 bn116 bn117 bn118 bn119 bn120 bn121 bn122 bn123 bn124 bn125 bn126 bn127 bn128
+563,gmetad: Warning: we failed to resolve data source name bn142 bn143 bn144 bn145 bn146 bn147 bn148 bn149 bn150 bn151 bn152 bn153 bn154 bn155 bn156 bn157 bn158 bn159 bn160 bn161 bn162 bn163 bn164 bn165 bn166 bn167 bn168 bn169 bn170 bn171 bn172 bn173 bn174 bn175 bn176 bn177 bn178 bn179 bn180 bn181 bn182 bn183 bn184 bn185 bn186 bn187 bn188 bn189 bn190 bn191 bn192 bn193 bn194 bn195 bn196 bn197 bn198 bn199 bn200 bn201 bn202 bn203 bn204 bn205 bn206 bn207 bn208 bn209 bn210 bn211 bn212 bn213 bn214 bn215 bn216 bn217 bn218 bn219 bn220 bn221 bn222 bn223 bn224 bn225 bn226 bn227 bn228 bn229 bn230 bn231 bn232 bn233 bn234 bn235 bn236 bn237 bn238 bn239 bn240 bn241 bn242 bn243 bn244 bn245 bn246 bn247 bn248 bn249 bn250 bn251 bn252 bn253 bn254 bn255 bn256
+564,gmetad: Warning: we failed to resolve data source name bn270 bn271 bn272 bn273 bn274 bn275 bn276 bn277 bn278 bn279 bn280 bn281 bn282 bn283 bn284 bn285 bn286 bn287 bn288 bn289 bn290 bn291 bn292 bn293 bn294 bn295 bn296 bn297 bn298 bn299 bn300 bn301 bn302 bn303 bn304 bn305 bn306 bn307 bn308 bn309 bn310 bn311 bn312 bn313 bn314 bn315 bn316 bn317 bn318 bn319 bn320 bn321 bn322 bn323 bn324 bn325 bn326 bn327 bn328 bn329 bn330 bn331 bn332 bn333 bn334 bn335 bn336 bn337 bn338 bn339 bn340 bn341 bn342 bn343 bn344 bn345 bn346 bn347 bn348 bn349 bn350 bn351 bn352 bn353 bn354 bn355 bn356 bn357 bn358 bn359 bn360 bn361 bn362 bn363 bn364 bn365 bn366 bn367 bn368 bn369 bn370 bn371 bn372 bn373 bn374 bn375 bn376 bn377 bn378 bn379 bn380 bn381 bn382 bn383 bn384
+565,gmetad: Warning: we failed to resolve data source name bn398 bn399 bn400 bn401 bn402 bn403 bn404 bn405 bn406 bn407 bn408 bn409 bn410 bn411 bn412 bn413 bn414 bn415 bn416 bn417 bn418 bn419 bn420 bn421 bn422 bn423 bn424 bn425 bn426 bn427 bn428 bn429 bn430 bn431 bn432 bn433 bn434 bn435 bn436 bn437 bn438 bn439 bn440 bn441 bn442 bn443 bn444 bn445 bn446 bn447 bn448 bn449 bn450 bn451 bn452 bn453 bn454 bn455 bn456 bn457 bn458 bn459 bn460 bn461 bn462 bn463 bn464 bn465 bn466 bn467 bn468 bn469 bn470 bn471 bn472 bn473 bn474 bn475 bn476 bn477 bn478 bn479 bn480 bn481 bn482 bn483 bn484 bn485 bn486 bn487 bn488 bn489 bn490 bn491 bn492 bn493 bn494 bn495 bn496 bn497 bn498 bn499 bn500 bn501 bn502 bn503 bn504 bn505 bn506 bn507 bn508 bn509 bn510 bn511 bn512
+566,gmetad: Warning: we failed to resolve data source name bn526 bn527 bn528 bn529 bn530 bn531 bn532 bn533 bn534 bn535 bn536 bn537 bn538 bn539 bn540 bn541 bn542 bn543 bn544 bn545 bn546 bn547 bn548 bn549 bn550 bn551 bn552 bn553 bn554 bn555 bn556 bn557 bn558 bn559 bn560 bn561 bn562 bn563 bn564 bn565 bn566 bn567 bn568 bn569 bn570 bn571 bn572 bn573 bn574 bn575 bn576 bn577 bn578 bn579 bn580 bn581 bn582 bn583 bn584 bn585 bn586 bn587 bn588 bn589 bn590 bn591 bn592 bn593 bn594 bn595 bn596 bn597 bn598 bn599 bn600 bn601 bn602 bn603 bn604 bn605 bn606 bn607 bn608 bn609 bn610 bn611 bn612 bn613 bn614 bn615 bn616 bn617 bn618 bn619 bn620 bn621 bn622 bn623 bn624 bn625 bn626 bn627 bn628 bn629 bn630 bn631 bn632 bn633 bn634 bn635 bn636 bn637 bn638 bn639 bn640
+567,gmetad: Warning: we failed to resolve data source name bn654 bn655 bn656 bn657 bn658 bn659 bn660 bn661 bn662 bn663 bn664 bn665 bn666 bn667 bn668 bn669 bn670 bn671 bn672 bn673 bn674 bn675 bn676 bn677 bn678 bn679 bn680 bn681 bn682 bn683 bn684 bn685 bn686 bn687 bn688 bn689 bn690 bn691 bn692 bn693 bn694 bn695 bn696 bn697 bn698 bn699 bn700 bn701 bn702 bn703 bn704 bn705 bn706 bn707 bn708 bn709 bn710 bn711 bn712 bn713 bn714 bn715 bn716 bn717 bn718 bn719 bn720 bn721 bn722 bn723 bn724 bn725 bn726 bn727 bn728 bn729 bn730 bn731 bn732 bn733 bn734 bn735 bn736 bn737 bn738 bn739 bn740 bn741 bn742 bn743 bn744 bn745 bn746 bn747 bn748 bn749 bn750 bn751 bn752 bn753 bn754 bn755 bn756 bn757 bn758 bn759 bn760 bn761 bn762 bn763 bn764 bn765 bn766 bn767 bn768
+568,gmetad: Warning: we failed to resolve data source name dadmin2 dadmin3 dadmin4
+569,gmetad: Warning: we failed to resolve data source name bn782 bn783 bn784 bn785 bn786 bn787 bn788 bn789 bn790 bn791 bn792 bn793 bn794 bn795 bn796 bn797 bn798 bn799 bn800 bn801 bn802 bn803 bn804 bn805 bn806 bn807 bn808 bn809 bn810 bn811 bn812 bn813 bn814 bn815 bn816 bn817 bn818 bn819 bn820 bn821 bn822 bn823 bn824 bn825 bn826 bn827 bn828 bn829 bn830 bn831 bn832 bn833 bn834 bn835 bn836 bn837 bn838 bn839 bn840 bn841 bn842 bn843 bn844 bn845 bn846 bn847 bn848 bn849 bn850 bn851 bn852 bn853 bn854 bn855 bn856 bn857 bn858 bn859 bn860 bn861 bn862 bn863 bn864 bn865 bn866 bn867 bn868 bn869 bn870 bn871 bn872 bn873 bn874 bn875 bn876 bn877 bn878 bn879 bn880 bn881 bn882 bn883 bn884 bn885 bn886 bn887 bn888 bn889 bn890 bn891 bn892 bn893 bn894 bn895 bn896
+570,gmetad: Warning: we failed to resolve data source name bn910 bn911 bn912 bn913 bn914 bn915 bn916 bn917 bn918 bn919 bn920 bn921 bn922 bn923 bn924 bn925 bn926 bn927 bn928 bn929 bn930 bn931 bn932 bn933 bn934 bn935 bn936 bn937 bn938 bn939 bn940 bn941 bn942 bn943 bn944 bn945 bn946 bn947 bn948 bn949 bn950 bn951 bn952 bn953 bn954 bn955 bn956 bn957 bn958 bn959 bn960 bn961 bn962 bn963 bn964 bn965 bn966 bn967 bn968 bn969 bn970 bn971 bn972 bn973 bn974 bn975 bn976 bn977 bn978 bn979 bn980 bn981 bn982 bn983 bn984 bn985 bn986 bn987 bn988 bn989 bn990 bn991 bn992 bn993 bn994 bn995 bn996 bn997 bn998 bn999 bn1000 bn1001 bn1002 bn1003 bn1004 bn1005 bn1006 bn1007 bn1008 bn1009 bn1010 bn1011 bn1012 bn1013 bn1014 bn1015 bn1016 bn1017 bn1018 bn1019 bn1020 bn1021 bn1022 bn1023 bn1024
+571,gmetad: Warning: we failed to resolve data source name cn14 cn15 cn16 cn17 cn18 cn19 cn20 cn21 cn22 cn23 cn24 cn25 cn26 cn27 cn28 cn29 cn30 cn31 cn32 cn33 cn34 cn35 cn36 cn37 cn38 cn39 cn40 cn41 cn42 cn43 cn44 cn45 cn46 cn47 cn48 cn49 cn50 cn51 cn52 cn53 cn54 cn55 cn56 cn57 cn58 cn59 cn60 cn61 cn62 cn63 cn64 cn65 cn66 cn67 cn68 cn69 cn70 cn71 cn72 cn73 cn74 cn75 cn76 cn77 cn78 cn79 cn80 cn81 cn82 cn83 cn84 cn85 cn86 cn87 cn88 cn89 cn90 cn91 cn92 cn93 cn94 cn95 cn96 cn97 cn98 cn99 cn100 cn101 cn102 cn103 cn104 cn105 cn106 cn107 cn108 cn109 cn110 cn111 cn112 cn113 cn114 cn115 cn116 cn117 cn118 cn119 cn120 cn121 cn122 cn123 cn124 cn125 cn126 cn127 cn128
+572,gmetad: Warning: we failed to resolve data source name cn142 cn143 cn144 cn145 cn146 cn147 cn148 cn149 cn150 cn151 cn152 cn153 cn154 cn155 cn156 cn157 cn158 cn159 cn160 cn161 cn162 cn163 cn164 cn165 cn166 cn167 cn168 cn169 cn170 cn171 cn172 cn173 cn174 cn175 cn176 cn177 cn178 cn179 cn180 cn181 cn182 cn183 cn184 cn185 cn186 cn187 cn188 cn189 cn190 cn191 cn192 cn193 cn194 cn195 cn196 cn197 cn198 cn199 cn200 cn201 cn202 cn203 cn204 cn205 cn206 cn207 cn208 cn209 cn210 cn211 cn212 cn213 cn214 cn215 cn216 cn217 cn218 cn219 cn220 cn221 cn222 cn223 cn224 cn225 cn226 cn227 cn228 cn229 cn230 cn231 cn232 cn233 cn234 cn235 cn236 cn237 cn238 cn239 cn240 cn241 cn242 cn243 cn244 cn245 cn246 cn247 cn248 cn249 cn250 cn251 cn252 cn253 cn254 cn255 cn256
+573,gmetad: Warning: we failed to resolve data source name cn270 cn271 cn272 cn273 cn274 cn275 cn276 cn277 cn278 cn279 cn280 cn281 cn282 cn283 cn284 cn285 cn286 cn287 cn288 cn289 cn290 cn291 cn292 cn293 cn294 cn295 cn296 cn297 cn298 cn299 cn300 cn301 cn302 cn303 cn304 cn305 cn306 cn307 cn308 cn309 cn310 cn311 cn312 cn313 cn314 cn315 cn316 cn317 cn318 cn319 cn320 cn321 cn322 cn323 cn324 cn325 cn326 cn327 cn328 cn329 cn330 cn331 cn332 cn333 cn334 cn335 cn336 cn337 cn338 cn339 cn340 cn341 cn342 cn343 cn344 cn345 cn346 cn347 cn348 cn349 cn350 cn351 cn352 cn353 cn354 cn355 cn356 cn357 cn358 cn359 cn360 cn361 cn362 cn363 cn364 cn365 cn366 cn367 cn368 cn369 cn370 cn371 cn372 cn373 cn374 cn375 cn376 cn377 cn378 cn379 cn380 cn381 cn382 cn383 cn384
+574,gmetad: Warning: we failed to resolve data source name cn398 cn399 cn400 cn401 cn402 cn403 cn404 cn405 cn406 cn407 cn408 cn409 cn410 cn411 cn412 cn413 cn414 cn415 cn416 cn417 cn418 cn419 cn420 cn421 cn422 cn423 cn424 cn425 cn426 cn427 cn428 cn429 cn430 cn431 cn432 cn433 cn434 cn435 cn436 cn437 cn438 cn439 cn440 cn441 cn442 cn443 cn444 cn445 cn446 cn447 cn448 cn449 cn450 cn451 cn452 cn453 cn454 cn455 cn456 cn457 cn458 cn459 cn460 cn461 cn462 cn463 cn464 cn465 cn466 cn467 cn468 cn469 cn470 cn471 cn472 cn473 cn474 cn475 cn476 cn477 cn478 cn479 cn480 cn481 cn482 cn483 cn484 cn485 cn486 cn487 cn488 cn489 cn490 cn491 cn492 cn493 cn494 cn495 cn496 cn497 cn498 cn499 cn500 cn501 cn502 cn503 cn504 cn505 cn506 cn507 cn508 cn509 cn510 cn511 cn512
+575,gmetad: Warning: we failed to resolve data source name cn526 cn527 cn528 cn529 cn530 cn531 cn532 cn533 cn534 cn535 cn536 cn537 cn538 cn539 cn540 cn541 cn542 cn543 cn544 cn545 cn546 cn547 cn548 cn549 cn550 cn551 cn552 cn553 cn554 cn555 cn556 cn557 cn558 cn559 cn560 cn561 cn562 cn563 cn564 cn565 cn566 cn567 cn568 cn569 cn570 cn571 cn572 cn573 cn574 cn575 cn576 cn577 cn578 cn579 cn580 cn581 cn582 cn583 cn584 cn585 cn586 cn587 cn588 cn589 cn590 cn591 cn592 cn593 cn594 cn595 cn596 cn597 cn598 cn599 cn600 cn601 cn602 cn603 cn604 cn605 cn606 cn607 cn608 cn609 cn610 cn611 cn612 cn613 cn614 cn615 cn616 cn617 cn618 cn619 cn620 cn621 cn622 cn623 cn624 cn625 cn626 cn627 cn628 cn629 cn630 cn631 cn632 cn633 cn634 cn635 cn636 cn637 cn638 cn639 cn640
+576,gmetad: Warning: we failed to resolve data source name cn654 cn655 cn656 cn657 cn658 cn659 cn660 cn661 cn662 cn663 cn664 cn665 cn666 cn667 cn668 cn669 cn670 cn671 cn672 cn673 cn674 cn675 cn676 cn677 cn678 cn679 cn680 cn681 cn682 cn683 cn684 cn685 cn686 cn687 cn688 cn689 cn690 cn691 cn692 cn693 cn694 cn695 cn696 cn697 cn698 cn699 cn700 cn701 cn702 cn703 cn704 cn705 cn706 cn707 cn708 cn709 cn710 cn711 cn712 cn713 cn714 cn715 cn716 cn717 cn718 cn719 cn720 cn721 cn722 cn723 cn724 cn725 cn726 cn727 cn728 cn729 cn730 cn731 cn732 cn733 cn734 cn735 cn736 cn737 cn738 cn739 cn740 cn741 cn742 cn743 cn744 cn745 cn746 cn747 cn748 cn749 cn750 cn751 cn752 cn753 cn754 cn755 cn756 cn757 cn758 cn759 cn760 cn761 cn762 cn763 cn764 cn765 cn766 cn767 cn768
+577,gmetad: Warning: we failed to resolve data source name cn782 cn783 cn784 cn785 cn786 cn787 cn788 cn789 cn790 cn791 cn792 cn793 cn794 cn795 cn796 cn797 cn798 cn799 cn800 cn801 cn802 cn803 cn804 cn805 cn806 cn807 cn808 cn809 cn810 cn811 cn812 cn813 cn814 cn815 cn816 cn817 cn818 cn819 cn820 cn821 cn822 cn823 cn824 cn825 cn826 cn827 cn828 cn829 cn830 cn831 cn832 cn833 cn834 cn835 cn836 cn837 cn838 cn839 cn840 cn841 cn842 cn843 cn844 cn845 cn846 cn847 cn848 cn849 cn850 cn851 cn852 cn853 cn854 cn855 cn856 cn857 cn858 cn859 cn860 cn861 cn862 cn863 cn864 cn865 cn866 cn867 cn868 cn869 cn870 cn871 cn872 cn873 cn874 cn875 cn876 cn877 cn878 cn879 cn880 cn881 cn882 cn883 cn884 cn885 cn886 cn887 cn888 cn889 cn890 cn891 cn892 cn893 cn894 cn895 cn896
+578,gmetad: Warning: we failed to resolve data source name cn910 cn911 cn912 cn913 cn914 cn915 cn916 cn917 cn918 cn919 cn920 cn921 cn922 cn923 cn924 cn925 cn926 cn927 cn928 cn929 cn930 cn931 cn932 cn933 cn934 cn935 cn936 cn937 cn938 cn939 cn940 cn941 cn942 cn943 cn944 cn945 cn946 cn947 cn948 cn949 cn950 cn951 cn952 cn953 cn954 cn955 cn956 cn957 cn958 cn959 cn960 cn961 cn962 cn963 cn964 cn965 cn966 cn967 cn968 cn969 cn970 cn971 cn972 cn973 cn974 cn975 cn976 cn977 cn978 cn979 cn980 cn981 cn982 cn983 cn984 cn985 cn986 cn987 cn988 cn989 cn990 cn991 cn992 cn993 cn994 cn995 cn996 cn997 cn998 cn999 cn1000 cn1001 cn1002 cn1003 cn1004 cn1005 cn1006 cn1007 cn1008 cn1009 cn1010 cn1011 cn1012 cn1013 cn1014 cn1015 cn1016 cn1017 cn1018 cn1019 cn1020 cn1021 cn1022 cn1023 cn1024
+579,gmetad: Warning: we failed to resolve data source name dn14 dn15 dn16 dn17 dn18 dn19 dn20 dn21 dn22 dn23 dn24 dn25 dn26 dn27 dn28 dn29 dn30 dn31 dn32 dn33 dn34 dn35 dn36 dn37 dn38 dn39 dn40 dn41 dn42 dn43 dn44 dn45 dn46 dn47 dn48 dn49 dn50 dn51 dn52 dn53 dn54 dn55 dn56 dn57 dn58 dn59 dn60 dn61 dn62 dn63 dn64 dn65 dn66 dn67 dn68 dn69 dn70 dn71 dn72 dn73 dn74 dn75 dn76 dn77 dn78 dn79 dn80 dn81 dn82 dn83 dn84 dn85 dn86 dn87 dn88 dn89 dn90 dn91 dn92 dn93 dn94 dn95 dn96 dn97 dn98 dn99 dn100 dn101 dn102 dn103 dn104 dn105 dn106 dn107 dn108 dn109 dn110 dn111 dn112 dn113 dn114 dn115 dn116 dn117 dn118 dn119 dn120 dn121 dn122 dn123 dn124 dn125 dn126 dn127 dn128
+580,gmetad: Warning: we failed to resolve data source name dn142 dn143 dn144 dn145 dn146 dn147 dn148 dn149 dn150 dn151 dn152 dn153 dn154 dn155 dn156 dn157 dn158 dn159 dn160 dn161 dn162 dn163 dn164 dn165 dn166 dn167 dn168 dn169 dn170 dn171 dn172 dn173 dn174 dn175 dn176 dn177 dn178 dn179 dn180 dn181 dn182 dn183 dn184 dn185 dn186 dn187 dn188 dn189 dn190 dn191 dn192 dn193 dn194 dn195 dn196 dn197 dn198 dn199 dn200 dn201 dn202 dn203 dn204 dn205 dn206 dn207 dn208 dn209 dn210 dn211 dn212 dn213 dn214 dn215 dn216 dn217 dn218 dn219 dn220 dn221 dn222 dn223 dn224 dn225 dn226 dn227 dn228 dn229 dn230 dn231 dn232 dn233 dn234 dn235 dn236 dn237 dn238 dn239 dn240 dn241 dn242 dn243 dn244 dn245 dn246 dn247 dn248 dn249 dn250 dn251 dn252 dn253 dn254 dn255 dn256
+581,gmetad: Warning: we failed to resolve data source name dn270 dn271 dn272 dn273 dn274 dn275 dn276 dn277 dn278 dn279 dn280 dn281 dn282 dn283 dn284 dn285 dn286 dn287 dn288 dn289 dn290 dn291 dn292 dn293 dn294 dn295 dn296 dn297 dn298 dn299 dn300 dn301 dn302 dn303 dn304 dn305 dn306 dn307 dn308 dn309 dn310 dn311 dn312 dn313 dn314 dn315 dn316 dn317 dn318 dn319 dn320 dn321 dn322 dn323 dn324 dn325 dn326 dn327 dn328 dn329 dn330 dn331 dn332 dn333 dn334 dn335 dn336 dn337 dn338 dn339 dn340 dn341 dn342 dn343 dn344 dn345 dn346 dn347 dn348 dn349 dn350 dn351 dn352 dn353 dn354 dn355 dn356 dn357 dn358 dn359 dn360 dn361 dn362 dn363 dn364 dn365 dn366 dn367 dn368 dn369 dn370 dn371 dn372 dn373 dn374 dn375 dn376 dn377 dn378 dn379 dn380 dn381 dn382 dn383 dn384
+582,gmetad: Warning: we failed to resolve data source name dn398 dn399 dn400 dn401 dn402 dn403 dn404 dn405 dn406 dn407 dn408 dn409 dn410 dn411 dn412 dn413 dn414 dn415 dn416 dn417 dn418 dn419 dn420 dn421 dn422 dn423 dn424 dn425 dn426 dn427 dn428 dn429 dn430 dn431 dn432 dn433 dn434 dn435 dn436 dn437 dn438 dn439 dn440 dn441 dn442 dn443 dn444 dn445 dn446 dn447 dn448 dn449 dn450 dn451 dn452 dn453 dn454 dn455 dn456 dn457 dn458 dn459 dn460 dn461 dn462 dn463 dn464 dn465 dn466 dn467 dn468 dn469 dn470 dn471 dn472 dn473 dn474 dn475 dn476 dn477 dn478 dn479 dn480 dn481 dn482 dn483 dn484 dn485 dn486 dn487 dn488 dn489 dn490 dn491 dn492 dn493 dn494 dn495 dn496 dn497 dn498 dn499 dn500 dn501 dn502 dn503 dn504 dn505 dn506 dn507 dn508 dn509 dn510 dn511 dn512
+583,gmetad: Warning: we failed to resolve data source name dn526 dn527 dn528 dn529 dn530 dn531 dn532 dn533 dn534 dn535 dn536 dn537 dn538 dn539 dn540 dn541 dn542 dn543 dn544 dn545 dn546 dn547 dn548 dn549 dn550 dn551 dn552 dn553 dn554 dn555 dn556 dn557 dn558 dn559 dn560 dn561 dn562 dn563 dn564 dn565 dn566 dn567 dn568 dn569 dn570 dn571 dn572 dn573 dn574 dn575 dn576 dn577 dn578 dn579 dn580 dn581 dn582 dn583 dn584 dn585 dn586 dn587 dn588 dn589 dn590 dn591 dn592 dn593 dn594 dn595 dn596 dn597 dn598 dn599 dn600 dn601 dn602 dn603 dn604 dn605 dn606 dn607 dn608 dn609 dn610 dn611 dn612 dn613 dn614 dn615 dn616 dn617 dn618 dn619 dn620 dn621 dn622 dn623 dn624 dn625 dn626 dn627 dn628 dn629 dn630 dn631 dn632 dn633 dn634 dn635 dn636 dn637 dn638 dn639 dn640
+584,gmetad: Warning: we failed to resolve data source name dn654 dn655 dn656 dn657 dn658 dn659 dn660 dn661 dn662 dn663 dn664 dn665 dn666 dn667 dn668 dn669 dn670 dn671 dn672 dn673 dn674 dn675 dn676 dn677 dn678 dn679 dn680 dn681 dn682 dn683 dn684 dn685 dn686 dn687 dn688 dn689 dn690 dn691 dn692 dn693 dn694 dn695 dn696 dn697 dn698 dn699 dn700 dn701 dn702 dn703 dn704 dn705 dn706 dn707 dn708 dn709 dn710 dn711 dn712 dn713 dn714 dn715 dn716 dn717 dn718 dn719 dn720 dn721 dn722 dn723 dn724 dn725 dn726 dn727 dn728 dn729 dn730 dn731 dn732 dn733 dn734 dn735 dn736 dn737 dn738 dn739 dn740 dn741 dn742 dn743 dn744 dn745 dn746 dn747 dn748 dn749 dn750 dn751 dn752 dn753 dn754 dn755 dn756 dn757 dn758 dn759 dn760 dn761 dn762 dn763 dn764 dn765 dn766 dn767 dn768
+585,gmetad: Warning: we failed to resolve data source name dn782 dn783 dn784 dn785 dn786 dn787 dn788 dn789 dn790 dn791 dn792 dn793 dn794 dn795 dn796 dn797 dn798 dn799 dn800 dn801 dn802 dn803 dn804 dn805 dn806 dn807 dn808 dn809 dn810 dn811 dn812 dn813 dn814 dn815 dn816 dn817 dn818 dn819 dn820 dn821 dn822 dn823 dn824 dn825 dn826 dn827 dn828 dn829 dn830 dn831 dn832 dn833 dn834 dn835 dn836 dn837 dn838 dn839 dn840 dn841 dn842 dn843 dn844 dn845 dn846 dn847 dn848 dn849 dn850 dn851 dn852 dn853 dn854 dn855 dn856 dn857 dn858 dn859 dn860 dn861 dn862 dn863 dn864 dn865 dn866 dn867 dn868 dn869 dn870 dn871 dn872 dn873 dn874 dn875 dn876 dn877 dn878 dn879 dn880 dn881 dn882 dn883 dn884 dn885 dn886 dn887 dn888 dn889 dn890 dn891 dn892 dn893 dn894 dn895 dn896
+586,gmetad: Warning: we failed to resolve data source name dn910 dn911 dn912 dn913 dn914 dn915 dn916 dn917 dn918 dn919 dn920 dn921 dn922 dn923 dn924 dn925 dn926 dn927 dn928 dn929 dn930 dn931 dn932 dn933 dn934 dn935 dn936 dn937 dn938 dn939 dn940 dn941 dn942 dn943 dn944 dn945 dn946 dn947 dn948 dn949 dn950 dn951 dn952 dn953 dn954 dn955 dn956 dn957 dn958 dn959 dn960 dn961 dn962 dn963 dn964 dn965 dn966 dn967 dn968 dn969 dn970 dn971 dn972 dn973 dn974 dn975 dn976 dn977 dn978 dn979 dn980 dn981 dn982 dn983 dn984 dn985 dn986 dn987 dn988 dn989 dn990 dn991 dn992 dn993 dn994 dn995 dn996 dn997 dn998 dn999 dn1000 dn1001 dn1002 dn1003 dn1004 dn1005 dn1006 dn1007 dn1008 dn1009 dn1010 dn1011 dn1012 dn1013 dn1014 dn1015 dn1016 dn1017 dn1018 dn1019 dn1020 dn1021 dn1022 dn1023 dn1024
+587,gmetad: Warning: we failed to resolve trusted host name dadmin3 dadmin4
+588,Disabled Privacy Extensions on device <*>
+589,IPv6 over IPv4 tunneling driver
+590,<*> Cannot open file /dev/logsurfer for writing (No such file or directory)
+591,<*> Changing permissions on special file /dev/logsurfer
+592,solproxy: succeeded
+593,xinetd[1798]: removing <*>
+594,xinetd[1801]: removing <*>
+595,xinetd[1799]: removing <*>
+596,-- <*> ROOT LOGIN ON <*>
+597,<*> DEVPATH is not set
+598,input: AT Translated Set 2 keyboard on isa0060/serio0
+599,<*> bad username [ ]
+600,<*> FAILED LOGIN <*> FROM (null) FOR <*> Authentication failure
+601,root[2135]: ROOT LOGIN ON tty1
+602,kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+603,<*> Received TERM or STOP signal... shutting down...
+604,kernel: Kernel <*> <*> <*>
+605,nfslock: lockd shutdown failed
+606,kernel: hw_random: RNG not detected
+607,fsck: [/sbin/fsck.ext3 (1) -- <*>
+608,fsck: fsck.ext3 -a <*>
+609,dhcpd:
+610,Server Administrator: Instrumentation Service EventID: 1053 Temperature sensor detected a warning value Sensor location: BMC Ambient Temp Chassis location: Main System Chassis Previous state was: OK (Normal) Temperature sensor value (in Degrees Celsius): 10.0
+611,<*> Agent forwarding request denied in configuration.
+612,Server Administrator: Instrumentation Service EventID: 1052 Temperature sensor returned to a normal value Sensor location: BMC Ambient Temp Chassis location: Main System Chassis Previous state was: Non-Critical (Warning) Temperature sensor value (in Degrees Celsius): 11.0
+613,ib_sm.x[24904]: [ib_sm_sweep.c:1264]: Rediscover the subnet
+614,ib_sm.x[24904]: [ib_sm_sweep.c:1792]: async events require sweep
+615,"ib_sm.x[24904]: [ib_sm_discovery.c:1103]: Failed discover node test, node <*> port_num= <*> error code 1"
+616,"ib_sm.x[24904]: <*> Failed to <*> - hop_count: <*> direct_path: 0, 1, <*> <*> <*> <*> <*> 0, 0, 0"
+617,ib_sm.x[24904]: [ib_sm_discovery.c:470]: Failed to GetNodeInfo() because of NO RESPONSE
+618,ib_sm.x[24904]: [ib_sm_discovery.c:949]: no routing required for port guid <*> lid <*>
+619,ib_sm.x[24904]: [INFO]: Configuration caused by <*> <*> <*>
+620,"ib_sm.x[24904]: [ib_sm_assign.c:229]: Set port <*> <*> DOWN (port prefix fe80000000000000, subnet_prefix fe80000000"
+621,"ib_sm.x[24904]: [ib_sm_assign.c:568]: Force port to go down due to LID conflict, node - <*> <*>"
+622,ib_sm.x[24904]: [ib_sm_sweep.c:1442]: Topology changed
+623,<*> [trip Temperature is <*> Celsius]
+624,"<*> Device: /dev/sda, initial Temperature is <*> Celsius"
+625,"<*> Device: /dev/sda, is SMART capable. Adding to ""monitor"" list."
+626,<*> Monitoring 0 ATA and 1 SCSI devices
+627,<*> smartd has fork()ed into background mode. New <*>
+628,kernel: Vendor: <*> Model: <*> Rev: <*>
+629,kernel: Copyright (c) 1999-2005 LSI Logic Corporation
+630,kernel: Fusion MPT SCSI Host driver 3.02.18
+631,kernel: Fusion MPT base driver 3.02.18
+632,kernel: SCSI device sda: drive cache: write through
+633,"kernel: ioc0: 53C1030: Capabilities={Initiator,Target}"
+634,kernel: mptbase: Initiating ioc0 bringup
+635,"kernel: scsi0 : ioc0: LSI53C1030, FwRev=01032300h, Ports=1, MaxQ=203, <*>"
+636,xinetd[2204]: removing <*>
+637,kernel: <*> no IPv6 routers present
+638,ib_sm.x[24904]: [INFO]: Generate SM <*> trap for <*>
+639,"ib_sm.x[24904]: [ib_sm_bringup.c:513]: Program port state, <*> port= <*> current state <*> neighbor <*> port= <*> current state <*>"
+640,ib_sm.x[24904]: [ib_sm_sweep.c:144]: A new IB node <*> was discovered and assigned LID <*>
+641,ib_sm.x[24904]: [INFO]: IB CliSessionThread PID= 24904
+642,dhcpd: in your dhcpd.conf file for the network segment
+643,dhcpd: to which interface eth1:0 is attached. **
+644,"dhcpd: you want, please write a subnet declaration"
+645,dhcpd: ** Ignoring requests on eth1:0. If this is not what
+646,dhcpd: No subnet declaration for eth1:0 (0.0.0.0).
+647,"mount.panfs: pan_ips: error -- cfg target addresses, 0x5 (Out of memory), err_loc=1, rhel_4_amd64/release/build/panfs/ips/pan_ips_cfg.c:294 <11>Nov <*> <*> mount.panfs: pan_ips: error -- real init, 0x5 (Out of memory), err_loc=3, <*>"
+648,xinetd[2230]: removing <*>
+649,<*> System clock time adjusted to the past. Resetting next wakeup time.
+650,xinetd[2199]: removing <*>
+651,sudo: <*> : <*> ; <*> ; USER=root ; <*>
+652,ib_sm.x[24904]: [ib_sm_sweep.c:254]: An existing IB node GUID <*> LID <*> was removed
+653,"ib_sm.x[24904]: [ib_sm_bringup.c:472]: Active port(s) now in INIT state <*> <*> state=2, neighbor <*> <*> <*>"
+654,ib_sm.x[24904]: [INFO]: Configuration caused by <*> <*> <*> <*>
+655,ifup: RTNETLINK answers: Network is unreachable
+656,xinetd[2231]: removing <*>
+657,xinetd[2244]: removing <*>
+658,xinetd[2229]: removing <*>
+659,xinetd[1796]: removing <*>
+660,dhcpd: DHCPREQUEST for <*> from <*> via eth0
+661,mount: mount.panfs warning: mount still trying to ping realm. Mount has been trying to ping for 2 seconds and may try for another 8 seconds
+662,mount: couldn't ping address #27#:3095 using <*> 0x23a1 (pan_sock: timeout)
+663,mount: mount.panfs warning:
+664,"mount: mount.panfs warning: This mount still may succeed, but one or more local interfaces (listed below) failed communicate with the Panasas realm during mount. This suggests that a route cannot be established between these local interface(s) and the system. A client sends a list of IP addresses on which the Panasas storage system may establish a connection. If any one of these addresses should be excluded from the mount time check, use the 'callback-network-disallow' or 'callback-address-disallow' mount options. See 'man 8 mount.panfs' for more details on PanFS mount options. Excluding the interface from the check at mount time #15# avoid long running mount commands."
+665,mount: mount.panfs: <*> local addresses: <*>
+666,mount: mount.panfs: started PanFS device [panfs://#27#/home]
+667,xinetd[2274]: removing <*>
+668,kernel: RPC: error 512 connecting to server saon101v2
+669,xinetd[2242]: removing <*>
+670,xinetd[2223]: removing <*>
+671,EXT3-fs: recovery complete.
+672,xinetd[1802]: removing <*>
+673,<*> Remote host disconnected: Authentication cancelled by user.
+674,<*> authentication cancelled by user: 'Authentication cancelled by user.'
+675,<*> Key exchange failed in remote: 'Key exchange failed.'
+676,<*> Remote host disconnected: Key exchange failed.
+677,<*> Public key <*> used.
+678,<*> Public key authentication for user <*> accepted.
+679,<*> LOGIN ON <*> BY #26#
+680,sudo: <*> : <*> ; <*> ; USER=root ; <*> <*>
+681,xinetd[1797]: removing <*>
+682,-- <*> LOGIN ON <*> BY #26#
+683,"ib_sm.x[24904]: [ib_sm_assign.c:273]: Clean up SA resources for port forced down due to subnet prefix change, node - <*> port=1"
+684,ib_sm.x[24904]: [ib_sm_bringup.c:531]: Force port <*> <*> <*> to DOWN because (1) 1st sweep or (2) role change.
+685,ib_sm.x[24904]: [ib_sm_bringup.c:577]: Force neighbor port <*> <*> <*> to DOWN because (1) 1st sweep or (2) role change.
+686,"ib_sm.x[24904]: [ib_sm_discovery.c:739]: switch lid change, node - <*> port=0, neighbor (nil), changing lid from 0, back to original <*>"
+687,ib_sm.x[24904]: <*> Failed to set <*> <*> <*>
+688,xinetd[1800]: removing <*>
+689,xinetd[2210]: removing <*>
+690,xinetd[2241]: removing <*>
+691,atkbd.c: Keyboard on isa0060/serio0 reports too many keys pressed.
+692,kernel: [IB_NET][ipoib_sarp_rewrite_send][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/host/ulp/ipoib/obj_host_amd64_custom1_rhel4/ts_ipoib/ipoib_arp.c:1008]ib0: can't find hw address for hash 00:00:00:00:00:00
+693,xinetd[2233]: removing <*>
+694,xinetd[2232]: removing <*>
+695,mount: mount.panfs warning: couldn't ping address #27#:3095
+696,mount: using <*> 0x23a1 (pan_sock: timeout)
+697,xinetd[2249]: removing <*>
+698,xinetd[2227]: removing <*>
+699,xinetd[2238]: removing <*>
+700,xinetd[2243]: removing <*>
+701,ib_sm.x[24904]: [ib_sm_sweep.c:1035]: Detect switch (LID= <*> port state change
+702,ib_sm.x[24904]: [ib_sm_sweep.c:1227]: Switch reported state change
+703,fsck: <*>
+704,fsck: Clearing orphaned inode <*> <*> <*> <*> <*>
+705,xinetd[2246]: removing <*>
+706,"ib_sm.x[24904]: [ib_sm_assign.c:615]: Clean up SA resources for port forced down due to LID conflict, node - <*> port=1"
+707,"ib_sm.x[24904]: [ib_sm_bringup.c:450]: Active state mismatch <*> <*> state 1, <*> <*> state 4"
+708,ib_sm.x[24904]: <*> IB node <*> port <*> <*> <*> <*>
+709,ib_sm.x[24904]: [INFO]: Configuration caused by some ports in INIT state
+710,ib_sm.x[24904]: [ib_sm_bringup.c:538]: Force port <*> <*> to DOWN because state(1) should be active but not.
+711,ib_sm.x[24904]: [ib_sm_bringup.c:584]: Force neighbor port <*> <*> to DOWN because <*> should be active but not.
+712,"ib_sm.x[24904]: <*> Skip node= <*> port= <*> bringup because topology is stale, no response"
+713,sshd[6379]: Invalid user #57# from ::ffff:10.100.248.3
+714,"mount.panfs: pan_ips: error -- real init, 0x5 (Out of memory), err_loc=3, <*> <11>Nov <*> <*> mount.panfs: bindcache: failed init IPS: 0x5 (Out of memory)"
+715,xinetd[2234]: removing <*>
+716,"<*> <*> to=root, <*> mailer=relay, <*> stat=queued"
+717,xinetd[2259]: removing <*>
+718,ib_sm.x[24904]: [WARN]: CLI output failed with error Broken pipe. Exiting thread.
+719,ib_sm.x[24904]: [INFO]: Receive SystemImageGUID change trap from port (LID= 29)
+720,ib_sm.x[24904]: [ib_sm_assign.c:389]: Failed to set LID on <*> because NO RESPONSE
+721,ib_sm.x[24904]: <*> Failed to <*> <*> - <*> <*>
+722,ib_sm.x[24904]: [ib_sm_sweep.c:369]: Failed to discover management port - <*>
+723,"ib_sm.x[24904]: [ib_sm_routing.c:2458]: No spine present in chassis, splitting switch_elem"
+724,<*> Idle timeout exceeded.
+725,kernel: <*> avc: denied { <*> avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+726,syslogd: <*> No space left on device
+727,/apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1684]: poll() timeout
+728,kernel: <*> <*> dirty:0 writeback:0 unstable:0 <*> <*> <*> <*>
+729,kernel: Free pages: <*> (0kB HighMem)
+730,kernel: <*>
+731,kernel: Node 0 <*> <*> <*> <*> <*> active:0kB inactive:0kB <*> <*> all_unreclaimable? <*>
+732,kernel: <*> 0 <*> <*>
+733,kernel: Node 0 <*> <*> <*> <*> <*> <*> <*> 1*256kB <*> 0*1024kB 1*2048kB <*> = <*>
+734,kernel: Node 0 HighMem per-cpu: empty
+735,kernel: Node 0 Normal <*> min:2696kB low:5392kB high:8088kB <*> <*> present:7323648kB <*> all_unreclaimable? <*>
+736,kernel: Swap cache: add <*> delete <*> find <*> race <*>
+737,kernel: cpu <*> <*> low <*> high <*> batch <*>
+738,kernel: oom-killer: <*>
+739,kernel: <*> pages <*> <*>
+740,kernel: 308365 reserved pages
+741,kernel: <*> pages shared
+742,kernel: Free swap: <*>
+743,kernel: Out of Memory: Killed process <*> <*>
+744,<*> (#65#) CMD (/home/#65#/salinas/tbird/cron_script.tbird > /home/#65#/salinas/tbird/VOTD/crontab.log 2>&1)
+745,<*> Updated timestamp for job <*> to <*>
+746,logrotate: ALERT exited abnormally with [1]
+747,last message repeated <*> times
+748,"<*> <*> 0: fl=0x8000, mode=100644: dev=8/6, <*> nlink=0, u/gid=0/0, <*>"
+749,"<*> <*> <*> <*> mode=10600: FIFO: dev=0/7, <*> nlink=1, u/gid=0/0, size=0"
+750,"<*> <*> 3: fl=0x2, mode=140777: SOCK localhost->[[UNIX: /dev/log]]"
+751,"<*> <*> SYSERR(root): queueup: cannot create queue file <*> euid=51, fd=-1, fp=0x0: No space left on device"
+752,<*> <*> SYSERR(root): returntosender: cannot select queue for <*>
+753,"<*> <*> low on space (SMTP-DAEMON needs <*> bytes + 100 blocks in /var/spool/clientmqueue), max avail: 0"
+754,"<*> <*> to=root, delay=00:00:00, <*> stat=Insufficient disk space; try again later"
+755,<*> (root) MAIL (mailed <*> bytes of output but got status 0x0047 )
+756,"<*> <*> <*> fl=0x8002, mode=20666: CHR: dev=0/13, <*> nlink=1, u/gid=0/0, size=0"
+757,<*> exiting
+758,kernel: Lustre: Routing socket NAL unloaded (final mem 0)
+759,<*> X11 connection from <*> <*>
+760,<*> bad username <*>
+761,sshd[21907]: <*> password failed for user #55#.
+762,sshd[21907]: Password authentication for user #55# failed (from #78# port 56551).
+763,"sshd[21907]: auths-pam: PAM subprocess returned packet SSH_PAM_OP_ERROR. (err_num: 7, err_msg: Authentication failure)"
+764,<*> PAM transaction resulted in error.
+765,<*> authentication failure; logname=LOGIN uid=0 euid=0 <*> ruser= rhost=
+766,<*> check pass; user unknown
+767,<*> authentication failure; logname=LOGIN uid=0 euid=0 <*> ruser= rhost= <*>
+768,kernel: Lustre: <*> Binding <*> <*> to <*>
+769,kernel: <*> <*> previously skipped <*> similar messages
+770,sudo: <*> : <*> ; <*> ; USER=root ; <*> <*> <*>
+771,<*> WARNING: DNS lookup failed for <*>
+772,<*> smartd is exiting (exit status 0)
+773,<*> smartd received signal 15: Terminated
+774,kernel: 0000000300000000 <*> 0000000000000000 0000000000000001
+775,kernel: 0000000300000000 ffffffffa00df0c0
+776,kernel: <ffffffff801114a8>{show_stack+241} <ffffffffa01a16eb>{:libcfs:kportal_assertion_failed+519}
+777,kernel: <ffffffff80131b48>{__wake_up+54} <*>
+778,kernel: <*> <ffffffff8013334e>{autoremove_wake_function+0}
+779,kernel: <*> <ffffffff80136048>{vprintk+498}
+780,kernel: <*> <ffffffff801360f2>{printk+141}
+781,kernel: <ffffffff8013d6a0>{__mod_timer+293} <ffffffff8022e239>{poke_blanked_console+162}
+782,kernel: <*> <ffffffff80185a59>{sys_ioctl+853}
+783,kernel: <ffffffff80146bf3>{__kernel_text_address+26} <ffffffff8011136c>{show_trace+375}
+784,kernel: <*> <ffffffff80130001>{recalc_task_prio+337}
+785,kernel: <ffffffff80189c1e>{dput+55} <ffffffff801814da>{__link_path_walk+3862}
+786,kernel: <ffffffff8018aa8b>{__d_lookup+272} <ffffffff80189c1e>{dput+55}
+787,kernel: <*> <ffffffff8013d6a0>{__mod_timer+293}
+788,kernel: <ffffffff8022e239>{poke_blanked_console+162} <ffffffff80230578>{vt_console_print+727}
+789,kernel: <*> <ffffffffa00be63f>{:sunrpc:rpc_clnt_sigunmask+63}
+790,kernel: <ffffffffa0250297>{:obdclass:class_decref+2250} <ffffffffa025136d>{:obdclass:class_detach+1761}
+791,kernel: 0000000000000000 ffffffff802ffa89 <*> <*>
+792,kernel: Call <*> <*>
+793,kernel: Lustre: <*> showing stack for process <*>
+794,kernel: LustreError: <*> OBD ioctl: device not setup <*>
+795,kernel: LustreError: <*> ASSERTION(eco->eco_refcount == 0) failed
+796,kernel: LustreError: <*> LBUG
+797,kernel: LustreError: dumping log to <*>
+798,kernel: lctl R running task 0 <*> <*> (NOTLB)
+799,"kernel: Lustre: <*> Invoked portals upcall /usr/lib/lustre/portals_upcall LBUG,/f3home/#13#/build.2.6/buildir/BUILD/lustre-#12#/lustre/obdecho/echo_client.c,echo_client_cleanup,1382"
+800,kernel: 0000000000000246 0000000000000003
+801,kernel: LustreError: <*> no device for: <*>
+802,kernel: LustreError: <*> OBD device 30 still set up
+803,kernel: LustreError: <*> OBD <*> is still busy with 4 references
+804,"kernel: You should stop active file system users, or use the --force option to cleanup."
+805,kernel: <ffffffff80230578>{vt_console_print+727} <*>
+806,kernel: <ffffffff801814da>{__link_path_walk+3862} <ffffffff801c8370>{dummy_inode_permission+0}
+807,kernel: <ffffffff80130001>{recalc_task_prio+337} <ffffffffa00c2d8b>{:sunrpc:__rpc_execute+867}
+808,kernel: <ffffffff80157cc6>{mempool_free_slab+0} <ffffffffa00fde4c>{:nfs:__nfs_revalidate_inode+1697}
+809,kernel: <ffffffffa00be63f>{:sunrpc:rpc_clnt_sigunmask+63} <ffffffff80131b48>{__wake_up+54}
+810,kernel: <*> segfault at <*> rip <*> rsp <*> error <*>
+811,<*> peer disconnected: SNMPv2-SMI::enterprises.674.10892.1
+812,kernel: ACPI: PM-Timer IO Port: 0x808
+813,mount.panfs: mount.panfs warning: mounting panfs in an untested environment!!
+814,mount.panfs: pan_kernel: expected release: 2.6.9-15.EL.rootsmp release is: 2.6.9-1.4.5.6smp
+815,mount: mount.panfs warning: mounting panfs in an untested environment!!
+816,mount: pan_kernel: expected release: 2.6.9-15.EL.rootsmp release is: 2.6.9-1.4.5.6smp
+817,"ifup: ts_ipoib device ib0 does not seem to be present, delaying initialization."
+818,mount: mount.panfs: panfs is not configured in the kernel
+819,Server Administrator: Instrumentation Service EventID: 1306 Redundancy lost Redundancy unit: BMC <*> Redundancy Chassis location: Main System Chassis Previous redundancy state was: Unknown
+820,"Server Administrator: Instrumentation Service EventID: 1354 Power supply detected a failure Sensor location: PS 1 Status Chassis location: Main System Chassis Previous state was: Unknown Power Supply type: AC Power Supply state: Presence detected, Failure detected, AC lost"
+821,<*> Listener created on port 22.
+822,<*> Daemon is running.
+823,xinetd[2139]: removing <*>
+824,ntpdate[2151]: no server suitable for synchronization found
+825,wall[14371]: wall: user root broadcasted 5 lines (114 chars)
+826,ifup: /sbin/ip route add <*> via 10.100.23.254 dev eth0
+827,xinetd[2167]: removing <*>
+828,xinetd[2211]: removing <*>
+829,<*> WARNING: Could not write /var/log/lastlog: No space left on device
+830,<*> segfault at <*> rip <*> rsp <*> error 14
+831,xinetd[2226]: removing <*>
+832,xinetd[2239]: removing <*>
+833,xinetd[2245]: removing <*>
+834,Server Administrator: Instrumentation Service EventID: 1154 Voltage sensor detected a failure value Sensor location: BMC ROMB Battery Chassis location: Main System Chassis Previous state was: OK (Normal) Discrete voltage state: Bad
+835,Server Administrator: Instrumentation Service EventID: 1152 Voltage sensor returned to a normal value Sensor location: BMC ROMB Battery Chassis location: Main System Chassis Previous state was: Critical (Failed) Discrete voltage state: Good
+836,sshd2[22438]: WARNING: Could not chdir to home directory /Net/usr/home/#95#: No such file or directory
+837,<*> WARNING: Setting tty modes failed: Invalid argument
+838,"- User ID: Red Hat, Inc. (Kernel Module GPG key)"
+839,USB Universal Host Controller Interface driver v2.2
+840,megaraid: #105# (Release Date: Thu Feb 03 12:27:22 EST 2005)
+841,sda: sda1 sda2 sda3 sda4 < sda5 sda6 >
+842,usbcore: USB support disabled
+843,i2c /dev entries driver
+844,mount: : server is down.
+845,mount: mount to NFS server 'nfs1' failed
+846,dcdbas: module license 'unspecified' taints kernel.
+847,Administrator: Instrumentation Service EventID: 1000 Server Administrator starting
+848,Administrator: Instrumentation Service EventID: 1001 Server Administrator startup complete
+849,xinetd[1813]: removing <*>
+850,<*> no IPv6 routers present
+851,ts_customize: Searching for custom.cnf. . .
+852,ts_customize: Skipping customization. custom.cnf not found.
+853,xinetd[2221]: removing <*>
+854,<*> Kerberos TGT authentication as user <*> accepted for <*>
+855,kernel: fs_client: Umounting panfs ...
+856,kernel: fs_client_cap: done
+857,kernel: fs_client_cap: starting to scrub the caps
+858,kernel: fs_client_fm: All RPCs returned
+859,"kernel: pan_kmod: done quiescing subdev 0x78 (""PANASAS kernel trace facility"")"
+860,panfs: Unmounting PanFS filesystems: succeeded
+861,Losing some ticks... checking if CPU frequency changed.
+862,Your time source seems to be instable or some driver is hogging interupts
+863,rip __do_softirq+0x4d/0xd0
+864,warning: many lost ticks.
+865,<*> Timed out waiting for hotplug event <*> Rebasing to <*>
+866,xinetd[1905]: removing <*>
+867,xinetd[1918]: removing <*>
+868,xinetd[2235]: removing <*>
+869,kernel: Node 0 <*> <*> 1*8kB <*> 0*32kB 1*64kB <*> <*> 1*512kB 0*1024kB <*> <*> = <*>
+870,fsck: [/sbin/fsck.ext3 (1) -- /tmp] fsck.ext3
+871,kernel: ext3_orphan_cleanup: deleting unreferenced inode <*>
+872,xinetd[2040]: removing <*>
+873,xinetd[2183]: removing <*>
+874,xinetd[2236]: removing <*>
+875,xinetd[2222]: removing <*>
+876,xinetd[2218]: removing <*>
+877,xinetd[2237]: removing <*>
+878,xinetd[2225]: removing <*>
+879,xinetd[2228]: removing <*>
+880,xinetd[2219]: removing <*>
+881,xinetd[2224]: removing <*>
+882,xinetd[2220]: removing <*>
+883,xinetd[2263]: removing <*>
+884,xinetd[2258]: removing <*>
+885,kernel: usb 3-1: device not accepting address <*> error -71
+886,kernel: Floppy drive(s): fd0 is 1.44M
+887,"fsck: orphaned inode <*> (uid=18252, gid=18252, mode=0100775, size=6036)"
+888,fsck: <*> Clearing
+889,xinetd[2193]: removing <*>
+890,xinetd[2060]: removing <*>
+891,xinetd[2057]: removing <*>
+892,xinetd[2190]: removing <*>
+893,xinetd[2058]: removing <*>
+894,xinetd[2074]: removing <*>
+895,xinetd[2247]: removing <*>
+896,kernel: EXT3-fs: sda3: 27 orphan inodes deleted
+897,xinetd[2248]: removing <*>
+898,smartd[1955]: Configuration file /etc/smartd.conf parsed but has no entries (like /dev/hda)
+899,smartd[1955]: Unable to monitor any SMART enabled devices. Try debug (-d) option. Exiting...
+900,kernel: - key was been created 15429758 seconds in future
+901,xinetd[2203]: removing <*>
+902,<*> removing chargen
+903,xinetd[2261]: removing kshell
+904,<*> removing time
+905,"ib_sm.x[24904]: [ib_sm_bringup.c:943]: Failed to bring port to ACTIVE for node=5ad000003947c, port= 1, no response"
+906,mount: 0x23a1 (pan_sock: timeout)
+907,ib_sm.x[24904]: <*> Failed to bring port to ACTIVE for <*> port= <*> mad status 0x1c
+908,<*> removing daytime
+909,"kernel: Found 2, no active local ports, check cables"
+910,kernel: scsi1 : <NULL>
+911,ts_srp:
+912,<*> no servers reachable
+913,Server Administrator: Instrumentation Service EventID: 1104 Fan sensor detected a failure value Sensor location: BMC FAN 4A RPM Chassis location: Main System Chassis Previous state was: Unknown Fan sensor value (in RPM): <*>
+914,xinetd[1891]: removing <*>
+915,kernel: UDP: short packet: From <*> <*> to #112#:8649
+916,xinetd[2303]: removing <*>
+917,Server Administrator: Instrumentation Service EventID: 1404 Memory device status is critical Memory device location: <*> Possible memory module event cause:Single bit error logging disabled
+918,"syslog-ng[2890]: Error accepting AF_UNIX connection, opened connections: 100, max: 100"
+919,<*> Did not receive identification string from <*>
+920,sudo: root : TTY=pts/7 ; PWD=/root ; USER=root ; COMMAND=/bin/su - #113# -c /apps/breakfix-testing/stress-system/linpack/start_linpack_warmup.sh
+921,sudo: #47# : TTY=pts/8 ; PWD=/mnt_projects/sysapps/#117#/largerun ; USER=root ; COMMAND=/apps/contrib/ccmd.sh all <*> <*>
+922,kernel: RPC: giant verf size: 2097152
+923,kernel: <*> <*> <*> failed
+924,VFS: file-max limit 65536 reached
+925,/apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1684]: RRD_update <*> opening <*> Too many open files in system
+926,/apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1684]: Unable to write meta data for metric <*> to RRD
+927,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[1417]: print_track_arr: <*> <*> <*>
+928,kernel: THH(1): <*> <*> Device in FATAL state
+929,"kernel: <*> <*> failed, return code = -254 (Fatal error (Local Catastrophic Error))"
+930,ntpd[1816]: can't open /var/lib/ntp/drift.TEMP: Too many open files in system
+931,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2300]: get_fatal_err_syndrome: FW CATASTR <*> = <*>
+932,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2368]: XHH_hob_fatal_err_thread: FATAL ERROR DETECTED IN WAKE-UP
+933,"kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2452]: XHH_hob_fatal_error: device=InfiniHost0, <*> <*>"
+934,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2250]: XHH_hob_halt_hca: HALT HCA returned 0x103
+935,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2363]: XHH_hob_fatal_err_thread: RECEIVED FATAL ERROR WAKEUP
+936,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2486]: XHH_hob_fatal_error: Fatal Event Syndrome = <*> <*>
+937,"kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/mad/obj_host_amd64_custom1_rhel4/ts_ib_mad/mad_filter.c:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>"
+938,ib_sm.x[24904]: [ib_sm_sweep.c:454]: Failed to get PortInfo from IB node <*> port 1
+939,kernel: [KERNEL_IB][ib_cache_update][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/core/obj_host_amd64_custom1_rhel4/ts_ib_core/core_cache.c:389]port_query failed (-22) for InfiniHost0
+940,"ib_sm.x[24904]: [INFO]: Program switch port state to down, <*> port= <*> due to non-responding CA"
+941,kernel: Losing some ticks... checking if CPU frequency changed.
+942,"kernel: nfs: server nfs1 not responding, still trying"
+943,kernel: nfs: server nfs1 OK
+944,kernel: call_verify: RPC call version mismatch!
+945,xinetd[2253]: removing <*>
+946,kernel: Your time source seems to be instable or some driver is hogging interupts
+947,kernel: rip __do_softirq+0x4d/0xd0
+948,kernel: warning: many lost ticks.
+949,kernel: TCP: drop open request from <*>
+950,omsad32: tput: No value for $TERM and no -T specified
+951,omsad32: tput:
+952,instsvcdrv: <*> device driver unload failed for kernel 2.6.9-15.EL.rootsmp
+953,kernel: pan_common: got -16 registering panasas at <*>
+954,"kernel: panfs exception: at u_modb.c:97, 0xfffffff0 (unknown), rollback: 0"
+955,kernel: dcdbas: BIOS Update phys addr: <*>
+956,<*> Package Release <*> Package Description=Dell <*> <*> <*> <*> Support Log <*>
+957,kernel: ssh[16890] general protection rip:2a95702087 rsp:7fbfffea88 error:0
+958,Server Administrator: Instrumentation Service EventID: 1554 Log size is full Log type: ESM
+959,Server Administrator: Instrumentation Service EventID: 1552 Log size is no longer near or at capacity Log type: ESM
+960,mount: mount.panfs: failed local addresses: #129#:1 10.100.136.251:1
+961,ntpd[2278]: Frequency format error in /var/lib/ntp/drift
+962,omsad32: Please make sure you have at least 100MB
+963,omsad32: invcol Error: Not enough space available in /var folder.
+964,Server Administrator: Instrumentation Service EventID: 1403 Memory device status is non-critical Memory device location: DIMM1_A Possible memory module event cause:Single bit warning error rate exceeded
+965,kernel: <ffffffff801882a1>{sys_ioctl+853} <ffffffffa03930fb>{:dcdbas:dcd_make_ioctl_call+42}
+966,kernel: <ffffffff8019b934>{compat_sys_ioctl+235} <ffffffff80124f8b>{sysenter_do_call+27}
+967,kernel: <ffffffffa038f831>{:dcdbas:EsmDDPreProcIOCTL+147} <ffffffffa0390160>{:dcdbas:dcd_device_ioctl+1271}
+968,kernel: <ffffffffa0393388>{:dcdbas:esm_rbu_mem_alloc+19} <ffffffffa038f35f>{:dcdbas:ImgUpdateReAlloc+118}
+969,kernel: Active:1497790 inactive:5469 dirty:5579 writeback:0 unstable:0 free:3635 slab:8515 mapped:1491873 pagetables:3281
+970,"kernel: biosie.bin: page allocation failure. order:9, mode:0xd0"
+971,kernel: dcdbas failed to allocate memory for BIOS Update
+972,<*> Package Release <*> Package Description=Dell <*> <*> <*> <*> Support Log <*> Exit code = 1 (Failure)
+973,xinetd[2078]: removing <*>
+974,"<*> BIOS update verification was successful. Version expected: A04, Version found: A04"
+975,kernel: <*> <*> node <*> 0000000000000000-00000001a0000000
+976,xinetd[2035]: removing <*>
+977,kernel: Active:146977 inactive:1292773 dirty:731579 writeback:732 unstable:0 free:4955 slab:73590 mapped:5309 pagetables:369
+978,kernel: Node 0 Normal: 114*4kB 75*8kB 50*16kB 39*32kB 13*64kB 18*128kB 4*256kB 1*512kB 1*1024kB 0*2048kB 0*4096kB = 8800kB
+979,"Server Administrator: Instrumentation Service EventID: 1404 Memory device status is critical Memory device location: DIMM1_A Possible memory module event cause:Single bit warning error rate exceeded,Single bit failure error rate exceeded"
+980,"<*> BIOS update verification failed. Version expected: A04, Version found: A02"
+981,kernel: SCSI error : <0 1 0 0> return code = 0x40001
+982,Server Administrator: Instrumentation Service EventID: 1553 Log size is near or at capacity Log type: ESM
+983,kernel: THH(1): 00000000 00000000 <*> <*>
+984,kernel: THH(1): <*> <*> 00000000 <*>
+985,kernel: THH(1): bcfc7000 16810000 00c0100f 00000000
+986,"kernel: THH(1): CMD ERROR DUMP. opcode=0xf, opc_mod = 0x1, exec_time_micro=60000000"
+987,kernel: THH(1): HCR dump END
+988,"kernel: THH(1): HCR dump, starting at addr 0x00000101bcf10160, size=32:"
+989,kernel: THH(1): OUT MAILBOX dump END
+990,"kernel: THH(1): OUT MAILBOX dump, starting at addr 0x00000101bcfc7000, size=64:"
+991,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif.c[212]: Failed command <*> <*> status=0x103 (0x0103 - unexpected error - fatal)
+992,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[1392]: list of outstanding tokens:
+993,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[1395]: outstanding <*> <*>
+994,"kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[823]: Command not completed after timeout: cmd=TAVOR_IF_CMD_HW2SW_MPT (0xf), token=0x1681, pid=0x287D, go=0"
+995,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[240]: XHH_hob_query_port_prop: cmdif returned FATAL
+996,kernel: THH(2): [XHH_qpm_process_local_mad]: ERROR on port 1: 259
+997,kernel: <*> avc: denied { search } for pid=19258 comm=ntpdate name=dev dev=ram0 ino=30 <*> avc: denied { getattr } for pid=19266 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+998,kernel: VIPKL(1): [MM_create_mr]:MM_mr_get_keys failed
+999,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_KL(1): [MM_create_mr]:MM_mr_get_keys failed
+1000,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_> THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_mr: Device in FATAL state
+1001,kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/srmr]:MM_mr_get_keys failed
+1002,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XH781]: XHH_hob_register_mr: Device in FATAL state
+1003,kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4te
+1004,kernel: VIPKL(16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_mr: Device in FATAL state
+1005,kernel: Aborting journal on device <*>
+1006,kernel: Buffer I/O error on device <*> logical block <*>
+1007,kernel: EXT3-fs error (device sda5) in start_transaction: Journal has aborted
+1008,kernel: EXT3-fs error (device <*> <*> <*> <*> <*>
+1009,kernel: Remounting filesystem read-only
+1010,"kernel: end_request: I/O error, dev sda, sector <*>"
+1011,kernel: ext3_abort called.
+1012,kernel: journal commit I/O error
+1013,kernel: lost page write due to I/O error on <*>
+1014,syslogd: <*> Read-only file system
+1015,kernel: EXT3-fs error (device sda3): ext3_get_inode_loc: unable to read inode block - <*> <*>
+1016,kernel: __journal_remove_journal_head: freeing b_committed_data
+1017,kernel: printk: 43 messages suppressed.
+1018,ntpd[2258]: can't open /var/lib/ntp/drift.TEMP: Read-only file system
+1019,rpc.statd[1891]: recv_rply: [127.0.0.1] RPC status 1
+1020,"rpc.statd[1891]: Can't callback 127.0.0.1 (100021,4), giving up."
+1021,xinetd[2250]: removing <*>
+1022,kernel: audit(1131887666.544:0): avc: denied { search } <3>audit(1131887666.669:0): avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+1023,kernel: audit(1131921407.011:0): avc: denied { write } for pid=19257 comm=ntpdate nam<3>audit(1131921407.033:0): avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+1024,kernel: <*> avc: denied { <*> } for pid=19257 comm=ntpdate <*> dev=ram0 <*> scontext=user_u:system_r:ntpd_t <*> avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+1025,"ib_sm.x[24904]: [ib_sm_bringup.c:781]: Failed to bring port to ARMED for node=5ad00000278ee, port= 23, state= 1, hop_count=5, mad status 0x1c"
+1026,<*> (root) <*> EDIT (root)
+1027,<*> (root) REPLACE (root)
+1028,<*> (root) RELOAD (cron/root)
+1029,<*> (root) CMD <*>
+1030,kernel: audit(1132039723.770:0): avc: denied { write } for <3>audit(1132039723.791:0): avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+1031,xinetd[15715]: FAIL: rsync service_limit <*>
+1032,sshd[3513]: Kerberos authentication as #107# denied for #92#@#24#
+1033,sshd[3713]: Remote host disconnected: Disconnect requested by Windows SSH Client.
+1034,sshd[3713]: disconnected by application in remote: 'Disconnect requested by Windows SSH Client.'
+1035,xinetd[12233]: removing <*>
+1036,xinetd[23031]: removing <*>
+1037,kernel: audit(1132185931.083:0): avc: denied { search } for pid=19257 comm=ntpdate name=dev dev=<3>audit(1132185931.208:0): avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+1038,kernel: audit(1132226740.623:0): avc: denied { write } for pid=19257 comm=ntpdate name=log dev=ram0 ino=199 scontext=user_u:system_r:ntpd_t tcontext=user_u:object_r:file_t tclass=soc<3>audit(1132226740.642:0): avc: denied { getattr } for pid=19265 comm=ntpd path=/dev/null dev=ram0 ino=40 scontext=user_u:system_r:ntpd_t tcontext=system_u:object_r:file_t tclass=chr_file
+1039,kernel: process `omdiag' is using obsolete setsockopt SO_BSDCOMPAT
+1040,kernel: ioctl32(omdiag:23008): Unknown cmd fd(13) cmd(c00c5512){00} arg(63781080) on <*>
