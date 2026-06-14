@@ -1,56 +1,59 @@
 # Cross-System Zero-Shot Log Anomaly Detection
 
-This is a log anomaly model that scores a system it has **never seen during
-training**. The interesting part isn't scale, it's the generalization trick and
-an honest **leave-one-system-out (LOSO)** evaluation that most papers quietly
-skip.
+Log anomaly detection is usually trained and evaluated on a single system. This
+project studies cross-system transfer under a **leave-one-system-out (LOSO)**
+protocol: the detector is trained on a set of systems and evaluated on a held-out
+system for which no labels are available.
 
-> **Full write-up: [REPORT.md](REPORT.md).** The short version: zero-shot
-> transfer collapses and trivial baselines beat the learned model. Anomalies
-> fall into a taxonomy (contextual, point, marked), and each type is caught by a
-> different label-free signal (surprise, rarity, severity). Picking the right
-> signal without labels turns out to fail, but 5 to 25 labels per system fix it
-> and get you to **macro ROC 0.94**. Everything runs on one 8 GB GPU for $0.
+> **Full write-up: [REPORT.md](REPORT.md).** Summary: zero-shot transfer degrades
+> sharply, and a training-free template-rarity baseline outperforms the learned
+> model on two of three held-out systems. Anomalies fall into a taxonomy
+> (contextual, point, marked), each addressed by a distinct label-free signal
+> (surprise, rarity, severity). Selecting the correct signal without labels is
+> unsolved, but 5-25 labels per system recover it, reaching macro ROC 0.94. All
+> experiments run on a single 8 GB GPU.
 
-## Core idea
+## Approach
 
-Naive cross-system transfer fails because models latch onto each system's own
-*vocabulary*. The way around it is to never work on raw tokens at all, and
-operate in a **shared semantic space** instead.
+Cross-system transfer fails when a model keys on system-specific *vocabulary*. To
+avoid this, the pipeline never operates on raw tokens; it maps every log line to a
+**shared semantic space** in which identical templates from different systems
+coincide.
 
 ```
 raw logs (N systems)
   -> Drain3 parse ............ templates ("Receiving block <*> src: <*>")
-       -> frozen MiniLM embed . shared 384-d vectors (cross-system!)
+       -> frozen MiniLM embed . shared 384-d vectors (cross-system)
             -> group into sequences . (template-seq, label)
                  -> small causal transformer over embeddings
                       -> surprise (predicted vs actual next embedding) = score
 ```
 
-Surprise is **unsupervised**, and that's exactly why it carries over to a system
-the model has never seen.
+The surprise signal is unsupervised, which is what allows a model trained on one
+set of systems to score a system it has not seen.
 
-## Locked design decisions
+## Design decisions
 
-| Decision | Choice | Why |
+| Decision | Choice | Rationale |
 |---|---|---|
-| Granularity | Per-system cut, unified `(seq, label)` interface | HDFS uses block sessions (keeps comparability with the literature); BGL/TB/OpenStack use fixed-count windows |
-| Window | 100 lines, stride 50 | counting by lines keeps sequence lengths comparable despite very different log rates |
-| Embedder | `all-MiniLM-L6-v2`, frozen, cached | fast on CPU ($0), strong, and easy to swap out for an ablation |
-| Representation | embedding **regression**, not template-id classification | template ids aren't shared across systems, but the vector space is |
-| Metric | PR-AUC primary, ROC-AUC secondary, macro-avg | holds up across systems with very different anomaly base rates |
+| Granularity | Per-system cut, unified `(seq, label)` interface | HDFS uses block sessions (comparable to prior work); BGL, Thunderbird, and OpenStack use fixed-count windows |
+| Window | 100 lines, stride 50 | line-count windows keep sequence lengths comparable across very different log rates |
+| Embedder | `all-MiniLM-L6-v2`, frozen, cached | inexpensive on CPU, strong, and easy to swap for an ablation |
+| Representation | embedding **regression**, not template-id classification | template ids are not shared across systems; the vector space is |
+| Metric | PR-AUC (primary), ROC-AUC (secondary), macro-averaged | robust to widely varying anomaly base rates |
 
-## Datasets (labeled)
+## Datasets
 
 | System | Unit | Labels |
 |---|---|---|
 | HDFS  | block session | `anomaly_label.csv` (2.9% of 575k blocks anomalous) |
 | BGL   | 100-line window | inline (`-` = normal) |
-| Thunderbird | 100-line window | inline; using the first 5M-line slice (the full file is 32 GB) |
+| Thunderbird | 100-line window | inline; first 5M-line slice (full file is 32 GB) |
 | OpenStack | VM-instance session | 4 abnormal instance UUIDs in `anomaly_labels.txt` |
 
-Unlabeled systems (Spark, Hadoop, Zookeeper, HPC, Apache, Linux, OpenSSH, and so
-on) can be dropped into the **pretraining pool** to strengthen generalization.
+Additional unlabeled systems (Spark, Hadoop, Zookeeper, HPC, Apache, Linux,
+OpenSSH, and others) can be added to the pretraining pool to improve
+generalization.
 
 ## Pipeline
 
@@ -58,33 +61,31 @@ on) can be dropped into the **pretraining pool** to strengthen generalization.
 python src/parse.py    --system HDFS --input data/HDFS/HDFS.log --out out
 python src/embed.py    --out out                       # build shared vector cache
 python src/sequence.py --system HDFS --out out --hdfs-labels data/HDFS/anomaly_label.csv
-python src/loso.py     --out out                       # train+eval, leave-one-system-out
+python src/loso.py     --out out                       # train and evaluate, leave-one-system-out
 ```
 
-Outputs land in `out/<system>/` (`parsed.parquet`, `templates.csv`,
+Outputs are written to `out/<system>/` (`parsed.parquet`, `templates.csv`,
 `sequences.npz`) and `out/embeddings/` (`vocab.parquet`, `vectors.npy`).
 
-## Evaluation protocol (the headline)
+## Evaluation protocol
 
-| Setting | Meaning |
+| Setting | Definition |
 |---|---|
-| Oracle | trained on the target system, so this is the upper bound |
-| Naive transfer | train on one system, apply raw to another, and watch it collapse |
-| **LOSO zero-shot** | train on all-but-target with no target labels; this is the headline number |
-| Few-shot | LOSO plus fine-tuning on k=10/50 target examples, the practical sweet spot |
+| Oracle | trained on the target system; upper bound |
+| Naive transfer | trained on one system and applied directly to another |
+| **LOSO zero-shot** | trained on all systems except the target, with no target labels |
+| Few-shot | LOSO plus fine-tuning on k=10/50 target examples |
 
 ## Results
 
-Three labeled systems are held out one at a time. The full tables and discussion
-live in [REPORT.md](REPORT.md); the headlines are below. The figures are
-regenerated from the saved `out/<system>/scores.npz` with `python
-src/plot_results.py --out out`.
+Each labeled system is held out in turn. Full tables and discussion are in
+[REPORT.md](REPORT.md); the main findings follow. Figures are regenerated from the
+saved `out/<system>/scores.npz` with `python src/plot_results.py --out out`.
 
-**Each anomaly type has its own label-free signal, and none of them wins
-everywhere.** That is the whole point of the taxonomy: rarity catches HDFS
-(point anomalies), semantic severity catches BGL and Thunderbird (textually
-marked alerts), and the naive sum is dragged down when it dilutes the right
-signal.
+No single label-free signal is best across systems: rarity is strongest on HDFS
+(point anomalies), while semantic severity is strongest on BGL and Thunderbird
+(textually marked alerts). An equal-weight sum is therefore diluted whenever it
+mixes in the wrong signal.
 
 ![Label-free signal ROC per held-out system](out/figs/signal_roc.png)
 
@@ -94,12 +95,12 @@ signal.
 | BGL | severity (marked) | 0.85 |
 | Thunderbird | severity (marked) | 1.00 |
 
-Surprise and rarity are complementary on HDFS (Spearman -0.03), so their
-ensemble reaches ROC 0.985.
+Surprise and rarity are complementary on HDFS (Spearman -0.03); their ensemble
+reaches ROC 0.985.
 
-**Label-free selection of the right signal fails, but a handful of labels fixes
-it.** A logistic combiner over the three z-scored signals, given k labeled
-examples per class, lifts macro ROC from 0.81 (equal-weight sum) to 0.94 at
-k=25, past the single-signal oracle (0.91).
+Selecting the correct signal without labels is unsolved, but a small number of
+labels resolves it. A logistic combiner over the three z-scored signals, given k
+labeled examples per class, raises macro ROC from 0.81 (equal-weight sum) to 0.94
+at k=25, exceeding the single-signal oracle (0.91).
 
 ![Few-shot macro ROC vs k](out/figs/fewshot_curve.png)
